@@ -1,0 +1,44 @@
+---
+title: "Music indicators"
+author: "Daniel Antal"
+format: 
+  docx: default
+  html: default
+editor: visual
+bibliography:
+- bib/indicators.bib
+- bib/OpenMusE.bib
+- bib/openmusicrepositories.bib
+---
+
+`Open Music Europe` offers a 'data-to-policy' pipeline, which extends the music data pipeline to evidence-based business and policy administration. A data pipeline is a method in which raw data is ingested from various data sources and then ported to data store, for further analysis, in this case, to an open, shared, collaborative music observatory. We extend this pipeline using reproducible research techniques, a novel application of the *Open Policy Analysis Guidelines*, and good statistical practices to support evidence-based policy analysis, scientific music research and sound business strategy building. In this last leg of the pipeline, we emphasise usability for our project's target audiences and good documentation practices. We want to ensure that our data is high quality and well understood to support robust and correct business, scientific or policy conclusions.
+
+## From data to indicators
+
+A statistical indicator summarises a key issue or phenomenon derived from a series of observed facts; it is a generalisation of the information in the data. The use of indicators is widespread in the economics, business, social aspects, or public policies of music and the broader cultural and creative industries agenda. The knowledge we gain from indicators is used to uncover social,  environmental or economic phenomena and establish connections between them. It also provides a basis for influencing and controlling such phenomena on a business level (for example, key performance indicators) or the level of public policy (for example, *ex ante* and *ex post* evaluation indicators.)
+
+Statistical indicators, or, in short, indicators, are derived from accounting systems and statistical data. Accounting systems are coherent and integrated accounts, balance sheets and tables based on a set of agreed rules. Statistical data is also collected based on agreed and coherent rules.
+
+The aim of statistical data collection is the creation of sets of data that can be generalised well; for example, when we collect data about people, it includes data on people from all relevant age or gender groups. `Open Music Europe` is using and developing data collection from primary sources, such as surveys and ephemeral big data, or taking samples of large, pre-existing but biased datasets, such as royalty accounts.
+
+## From indicators to policies
+
+> Unlike the data from which they are derived, indicators are used for specific purposes. The specific purpose of an indicator is determined by its context, the questions it seeks to answer, and the party or parties asking these questions. [@eurostat_towards_2014, p7]
+
+Indicators are used for specific purposes to support decisions with generalised information derived from the data. The specific purpose of an indicator is determined by its context, the questions it seeks to answer, and the party or parties asking these questions.
+
+[![Figure 1. Policy evaluation cycle with indicators, DOI: 10.6084/m9.figshare.23498441](plots/policy_evaluation_cycle_with_indicators.jpg){#policy_evaluation_cycle_with_indicator fig-alt="Figure 1. Policy evaluation cycle with indicators, DOI: 10.6084/m9.figshare.23498441"}](https://doi.org/10.6084/m9.figshare.23498441)
+
+-   **Report on the European Music Economy**: Support stakeholders with economic questions, such as taxation, price-setting, and advocating for policies that better support the development of the industry or its parts like publishing [@open_music_europe_economy_repository].
+
+-   **Report on Music Diversity and Circulation in Europe**: Local content regulations, maintaining the diversity of music circulation in Europe, and other aspects of diversity [@open_music_europe_diversity_repository].
+
+-   **Report on Music, Society, and Citizenship in Europe**: Inform about the societal aspects of music, amateur practices, education, and sustainability [@open_music_europe_society_repository].
+
+-   **Report on Music Innovation & Technology in Europe**: Novel data-driven applications [@open_music_europe_innovation_repository_2023].
+
+## List of Figures
+
+Figure 1: *Policy evaluation cycle with indicators*, DOI: [10.6084/m9.figshare.23498441](https://figshare.com/account/projects/129944/articles/23498441)
+
+## References
