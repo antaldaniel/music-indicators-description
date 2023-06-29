@@ -1,5 +1,7 @@
 # Open Music Europe Indicators
 
+Daniel Antal: [Indicators in Open Music Europe](https://antaldaniel.github.io/music-indicators-description/music-indicators.html) (manuscript)
+
 🌈 Contribution guidelines - you must abide by the [Contributor Covenant](https://www.contributor-covenant.org/version/2/1/code_of_conduct/) Code of Conduct.
 
 ## Folders
