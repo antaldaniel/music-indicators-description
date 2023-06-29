@@ -1,21 +1,34 @@
 ---
-title: "Music indicators"
+title: "Indicators in Open Music Europe"
 author: "Daniel Antal"
 format: 
   docx: default
   html: default
+  pdf: default
 editor: visual
+nocite: |
+  @statistical_infrastructure_indicators_2023, @policy_evaluation_cycle_with_indicators_2023
 bibliography:
 - bib/indicators.bib
+- bib/figures.bib
 - bib/OpenMusE.bib
 - bib/openmusicrepositories.bib
+- bib/statreg.bib
 ---
 
-`Open Music Europe` offers a 'data-to-policy' pipeline, which extends the music data pipeline to evidence-based business and policy administration. A data pipeline is a method in which raw data is ingested from various data sources and then ported to data store, for further analysis, in this case, to an open, shared, collaborative music observatory. We extend this pipeline using reproducible research techniques, a novel application of the *Open Policy Analysis Guidelines*, and good statistical practices to support evidence-based policy analysis, scientific music research and sound business strategy building. In this last leg of the pipeline, we emphasise usability for our project's target audiences and good documentation practices. We want to ensure that our data is high quality and well understood to support robust and correct business, scientific or policy conclusions.
+`Open Music Europe` offers a 'data-to-policy' pipeline, which extends the music data pipeline to evidence-based business and policy administration. A data pipeline is a method in which raw data is ingested from various data sources and then ported to data store, for further analysis, in this case, to an open, shared, collaborative music observatory. We extend this pipeline using reproducible research techniques, a novel application of the *Open Policy Analysis Guidelines*, and good statistical practices to support evidence-based policy analysis, scientific music research and sound business strategy building. In this last leg of the pipeline, we emphasise usability for our project's target audiences and good documentation practices. We want to ensure that our data is high quality and well understood to support robust and correct business, scientific or policy conclusions. This usually makes processing the data into an indicator, or a set of indicators, which are often displayed as a scoreboard, dashboard, or as a part of a standardised business or policy report.
 
 ## From data to indicators
 
-A statistical indicator summarises a key issue or phenomenon derived from a series of observed facts; it is a generalisation of the information in the data. The use of indicators is widespread in the economics, business, social aspects, or public policies of music and the broader cultural and creative industries agenda. The knowledge we gain from indicators is used to uncover social,  environmental or economic phenomena and establish connections between them. It also provides a basis for influencing and controlling such phenomena on a business level (for example, key performance indicators) or the level of public policy (for example, *ex ante* and *ex post* evaluation indicators.)
+The use of indicators is widespread in the economics, business, social aspects, or public policies of music and the broader cultural and creative industries agenda. A statistical indicator summarises a key issue or phenomenon derived from a series of observed facts; it is a generalisation of the information in the data. It is often compared metaphorically to traffic signs that help travelers to arrive to their destinations safely. The knowledge we gain from indicators is used to uncover social, environmental or economic phenomena and establish connections between them. It also provides a basis for influencing and controlling such phenomena on a business level (for example, key performance indicators) or the level of public policy (for example, *ex ante* and *ex post* evaluation indicators.)
+
+> A statistical indicator is a summary measure related to a key issue or phenomenon and derived from a series of observed facts. [@kotzeva_towards_2017, pp. 7][^1]
+
+[^1]: The definition of the statistical indicator originates from the Regulation 99/2013 of 15 January 2013 on the European statistical programme 2013-17 (Annex I,1: Indicators), which went through several modification and it is no longer in force. In a slightly more verbose format it is part of [Eurostat's Glossary](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Statistical_indicator).
+
+A `statistical indicator`, or simply, `indicator`, is the representation of statistical data for a specified time, place or any other relevant characteristic, corrected for at least one dimension (usually size) so as to allow for meaningful comparisons. It is a summary measure related to a key issue or phenomenon and derived from a series of observed facts.
+
+[![The statistical infrastructure of indicators, DOI: https://doi.org/10.6084/m9.figshare.23600571](plots/statistical_infrastructure_for_indicators.png){fig-alt="The statistical infrastructure of indicators, DOI: https://doi.org/10.6084/m9.figshare.23600571" fig-align="center" width="90%"}](https://doi.org/10.6084/m9.figshare.23600571)
 
 Statistical indicators, or, in short, indicators, are derived from accounting systems and statistical data. Accounting systems are coherent and integrated accounts, balance sheets and tables based on a set of agreed rules. Statistical data is also collected based on agreed and coherent rules.
 
@@ -23,13 +36,21 @@ The aim of statistical data collection is the creation of sets of data that can 
 
 ## From indicators to policies
 
+Indicators should be used as traffic signs, and not as route plans. Indicators do not give an explanation to a problem or reveal a solution; they must be interpreted in the context of domain-specific knowledge. While the word *policy* is very often used in the context of public policies, we use it in a more general meaning: a course or principle of action adopted or proposed by an organization or individual. `Open Music Europe` does not offer tailored data analysis for organisations or individuals, it offers indicators and other data products that can help the setting of policies for public policy, for-profit and social music enterprises, and hopefully even for individual creators. We would like to do this with placing indicators into reproducible reports. These reports contextualize our indicators, and end the data-to-policy pipeline.
+
 > Unlike the data from which they are derived, indicators are used for specific purposes. The specific purpose of an indicator is determined by its context, the questions it seeks to answer, and the party or parties asking these questions. [@eurostat_towards_2014, p7]
 
 Indicators are used for specific purposes to support decisions with generalised information derived from the data. The specific purpose of an indicator is determined by its context, the questions it seeks to answer, and the party or parties asking these questions.
 
-[![Figure 1. Policy evaluation cycle with indicators, DOI: 10.6084/m9.figshare.23498441](plots/policy_evaluation_cycle_with_indicators.jpg){#policy_evaluation_cycle_with_indicator fig-alt="Figure 1. Policy evaluation cycle with indicators, DOI: 10.6084/m9.figshare.23498441"}](https://doi.org/10.6084/m9.figshare.23498441)
+There are many conceptualisations on how policies should be set for public organizations or businesses; a review of policy cycles is beyond the scope of this paper. For presentation purposes, we use the policy cylce framework of .... adopted by Eurostat for indicator design guidance.
 
--   **Report on the European Music Economy**: Support stakeholders with economic questions, such as taxation, price-setting, and advocating for policies that better support the development of the industry or its parts like publishing [@open_music_europe_economy_repository].
+In an evidence-based policy cycle indicators should be provide different factual information. Different indicators may be needed in the first, `Concept` phase when a business or public body is seeking alternatives to solve a problem: for example, to increase royalty revenue for their artists or assets, and in the final `Outcome` or `Impact` assessment. While impact assessment is often associated with public policy, the current sustainability management techniques require music businesses to implement processes that reduce, for example, fossil fuel use, and eventually have a positive impact (in quantitative terms, a negative change) on greenhouse gas emissions.
+
+[![Figure 2. Policy evaluation cycle with indicators, DOI: 10.6084/m9.figshare.23498441](plots/policy_evaluation_cycle_with_indicators.jpg){#policy_evaluation_cycle_with_indicator fig-alt="Figure 2. Policy evaluation cycle with indicators, DOI: 10.6084/m9.figshare.23498441"}](https://doi.org/10.6084/m9.figshare.23498441)
+
+Following the data pillars of the *Feasibility Study*, we foresee the indicators made in our sample reports with the following topics:
+
+-   **Report on the European Music Economy**: Support stakeholders with economic questions, such as taxation, price-setting and economic exploitation, and advocating for policies that better support the development of the industry or its parts like publishing [@open_music_europe_economy_repository].
 
 -   **Report on Music Diversity and Circulation in Europe**: Local content regulations, maintaining the diversity of music circulation in Europe, and other aspects of diversity [@open_music_europe_diversity_repository].
 
@@ -37,8 +58,23 @@ Indicators are used for specific purposes to support decisions with generalised 
 
 -   **Report on Music Innovation & Technology in Europe**: Novel data-driven applications [@open_music_europe_innovation_repository_2023].
 
+## Interactive communication of indicators and Open Policy Analysis
+
+Indicators are most important in communicating data in a business or public policy context. To discuss this communication, it is helpful to distinguish between simple one-directional information transmission and communication as an interactive process. The informational or one-directional communication of indicators focuses on information transmission between a sender and a receiver. The interactive communication of indicators means that the message is actively constructed by both the sender and the receiver(s), who exchange information in a feedback loop.
+
+> Like the mediators who strive to communicate between different parties to find their point of agreement, communication through indicators allows to overpass boundaries between policy, science, statistics and public debate. Thus indicators are able to reveal various phenomena to different user groups --- policy makers, researchers, citizens, journalists, statisticians, specialists in different domains. Reaching various types of audiences through their communication function, indicators can ensure that statistics are usable and useful [@kotzeva_towards_2017, p7.].
+
+Going back to the often used traffic management example, a simple one-directional indicator is a speed limit sign on a static road sign; a more interactive version uses sensors and cameras to measure the actual traffic density and to recommend a speed at which vechicles will not jam the road.
+
+Interactivity allows for exchange of ideas and a shared creation of the intended content of the message that the planned indicator conveys. This requires user involvement in the construction of indicators and indicator sets. The developed indicators need to be based on a wide consensus reached through a dialogue involving as many potential user groups as appropriate. This way they can have their say on the relevance of the statistical message. For example, on Digital Streaming Platforms (DSPs) a music creator or label is facing with hundreds of hidden prices. One of our aims is to create price indicators that help a music label, distributor or a band to direct marketing efforts towards more valuable streaming segments. We need to create a price indicator that is as simple as a stock exchange index which is often followed by small and institutional investors alike.
+
+> PRINCIPLE 11 Relevance: European Statistics meet the needs of users. 11.1. Procedures are in place to consult users, to monitor the relevance and value of existing statistics in meeting their needs, and to consider and anticipate their emerging needs and priorities. Innovation is pursued to continuously improve statistical output. 11.2 Priority needs are being met and reflected in the work programme. 11.3 User satisfaction is monitored on a regular basis and is systematically followed up.
+
+The *European Statistics Code of Practice* [@european_statistics_code_of_practice_2017] see the *Quality Assurance Framework of the European Statistical System* [@ESS_QAF_2019 pp. 45-46] goes a step further in interactivity. The idea of interactivity in the statistical indicator design process originates in the the European Commission's *more-than-information approach*: „Communication is more than information: it establishes a relationship and initiates a dialogue with European citizens, it listens carefully and it connects to people. It is not a neutral exercise devoid of value, it is an essential part of the political process." The Commission refers here instead of the 'target audience' to 'citizens' because communication is not just a technical exercise of message delivery but part of a democratic involvement of citizens [@kotzeva_towards_2017, p7.]. Similarly, a good business indicator is not only printed in the annual financial or sustainability reports of a company: it is often cited in management discussions or communicated by line managers to workers to direct their focus. To make indicators conversation-starters or arguments in professional discussions, we have to ensure their usability: we not only need to involve potential users in the design phase, but we have to get regular feedback on the usability and professional improvement of the indicators.
+
 ## List of Figures
 
-Figure 1: *Policy evaluation cycle with indicators*, DOI: [10.6084/m9.figshare.23498441](https://figshare.com/account/projects/129944/articles/23498441)
+Figure 1: *The statistical infrastructure of indicators*, DOI: [10.6084/m9.figshare.23600571](https://doi.org/10.6084/m9.figshare.23600571)\
+Figure 2: *Policy evaluation cycle with indicators*, DOI: [10.6084/m9.figshare.23498441](https://figshare.com/account/projects/129944/articles/23498441)
 
 ## References
