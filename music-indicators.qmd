@@ -3,6 +3,7 @@ title: "Indicators in Open Music Europe"
 author: "Daniel Antal"
 toc: true
 date: today
+DOI: 10.5281/zenodo.8096811
 title-block-banner: true
 format:
   html: default
@@ -25,7 +26,7 @@ bibliography:
 ---
 
 ::: {.callout-tip}
-This is a manuscript developed for [Open Music Europe](https://openmuse.eu/) following the Open Policy Analysis Guidelines. All materials related to this research can be found in the open repository at [https://github.com/antaldaniel/music-indicators-description](https://github.com/antaldaniel/music-indicators-description). Bookmark this document as a [webpage](https://antaldaniel.github.io/music-indicators-description/music-indicators.html).
+This is a manuscript developed for [Open Music Europe](https://openmuse.eu/) following the Open Policy Analysis Guidelines. All materials related to this research can be found in the open repository at [https://github.com/antaldaniel/music-indicators-description](https://github.com/antaldaniel/music-indicators-description). Bookmark this document as a [webpage](https://antaldaniel.github.io/music-indicators-description/music-indicators.html). DOI: [10.5281/zenodo.8096811](https://zenodo.org/record/8096811).
 :::
 
 `Open Music Europe` offers a 'data-to-policy' pipeline, which extends the music data pipeline to evidence-based business and policy administration. A data pipeline is a method in which raw data is ingested from various data sources and then ported to data store, for further analysis, in this case, to an open, shared, collaborative music observatory. We extend this pipeline using reproducible research techniques, a novel application of the *Open Policy Analysis Guidelines*, and good statistical practices to support evidence-based policy analysis, scientific music research and sound business strategy building. In this last leg of the pipeline, we emphasise usability for our project's target audiences and good documentation practices. We want to ensure that our data is high quality and well understood to support robust and correct business, scientific or policy conclusions. This usually makes processing the data into an indicator, or a set of indicators, which are often displayed as a scoreboard, dashboard, or as a part of a standardised business or policy report.
