@@ -2,32 +2,62 @@
 title: "Indicators in Open Music Europe"
 author: "Daniel Antal"
 toc: true
+lang: en-GB
 date: today
 DOI: 10.5281/zenodo.8096811
 title-block-banner: true
+papersize: A4
 format:
   html: default
-  pdf: default
+  pdf:
+    colorlinks: true
+    latex: 
+       - lof: true
   docx: default
-  epub: default
+  epub: 
+   epub-cover-image: plots/cover_music_indicators_in_openmuse.png
 license: CC BY-ND
 editor: visual
 nocite: |
   @statistical_infrastructure_indicators_2023, @policy_evaluation_cycle_with_indicators_2023
+subject: Music business
 keywords:
   - Indicators
+  - Music business
   - Open Music Europe
 bibliography:
+- bib/capsurveys.bib
+- bib/ceemid.bib
 - bib/indicators.bib
 - bib/figures.bib
 - bib/OpenMusE.bib
 - bib/openmusicrepositories.bib
 - bib/statreg.bib
+
 ---
 
-::: {.callout-tip}
-This is a manuscript developed for [Open Music Europe](https://openmuse.eu/) following the Open Policy Analysis Guidelines. All materials related to this research can be found in the open repository at [https://github.com/antaldaniel/music-indicators-description](https://github.com/antaldaniel/music-indicators-description). Bookmark this document as a [webpage](https://antaldaniel.github.io/music-indicators-description/music-indicators.html). Permanent storage and DOI: [Zenodo](https://zenodo.org/record/8096811).
+{{< pagebreak >}}
+
+::: callout-tip
+  
+
+```{r printcover, echo=FALSE, out.width='50%', fig.align='center'}
+output_to <- ""
+output_to <- knitr::pandoc_to() 
+if ( !output_to %in% c("epub", "epub2")  ) {
+  knitr::include_graphics(here::here("plots", "cover_music_indicators_in_openmuse.png"))
+}
+```
+
+This is a manuscript developed for [Open Music Europe](https://openmuse.eu/) following the Open Policy Analysis Guidelines. All materials related to this research can be found in the open repository at <https://github.com/antaldaniel/music-indicators-description>. Bookmark this document as a [webpage](https://antaldaniel.github.io/music-indicators-description/music-indicators.html). Permanent storage and DOI: [Zenodo](https://zenodo.org/record/8096811).
 :::
+
+---
+nocite: |
+  @openmuse_2023
+---
+
+# Defining the Data-to-policy Pipeline
 
 `Open Music Europe` offers a 'data-to-policy' pipeline, which extends the music data pipeline to evidence-based business and policy administration. A data pipeline is a method in which raw data is ingested from various data sources and then ported to data store, for further analysis, in this case, to an open, shared, collaborative music observatory. We extend this pipeline using reproducible research techniques, a novel application of the *Open Policy Analysis Guidelines*, and good statistical practices to support evidence-based policy analysis, scientific music research and sound business strategy building. In this last leg of the pipeline, we emphasise usability for our project's target audiences and good documentation practices. We want to ensure that our data is high quality and well understood to support robust and correct business, scientific or policy conclusions. This usually makes processing the data into an indicator, or a set of indicators, which are often displayed as a scoreboard, dashboard, or as a part of a standardised business or policy report.
 
@@ -37,7 +67,7 @@ The use of indicators is widespread in the economics, business, social aspects, 
 
 > A statistical indicator is a summary measure related to a key issue or phenomenon and derived from a series of observed facts. [@kotzeva_towards_2017, pp. 7][^1]
 
-[^1]: The definition of the statistical indicator originates from the Regulation 99/2013 of 15 January 2013 on the European statistical programme 2013-17 (Annex I,1: Indicators), which went through several modification and it is no longer in force. In a slightly more verbose format it is part of [Eurostat's Glossary](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Statistical_indicator).
+[^1]: The definition of the statistical indicator originates from the Regulation 99/2013 of 15 January 2013 on the European statistical programme 2013-17 (Annex I,1: Indicators), which went through several modification and it is no longer in force [@eu_regulation_99-2013; @consolidated_eu_regulation_99-2013]. In a slightly more verbose format it is part of [Eurostat's Glossary](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Statistical_indicator).
 
 A `statistical indicator`, or simply, `indicator`, is the representation of statistical data for a specified time, place or any other relevant characteristic, corrected for at least one dimension (usually size) so as to allow for meaningful comparisons. It is a summary measure related to a key issue or phenomenon and derived from a series of observed facts.
 
@@ -61,7 +91,7 @@ In an evidence-based policy cycle indicators should be provide different factual
 
 [![Figure 2. Policy evaluation cycle with indicators, DOI: 10.6084/m9.figshare.23498441](plots/policy_evaluation_cycle_with_indicators.jpg){#policy_evaluation_cycle_with_indicator fig-alt="Figure 2. Policy evaluation cycle with indicators, DOI: 10.6084/m9.figshare.23498441"}](https://doi.org/10.6084/m9.figshare.23498441)
 
-Following the data pillars of the *Feasibility Study*, we foresee the indicators made in our sample reports with the following topics:
+Following the data pillars of the *Feasibility study for the establishment of a European Music Observatory : final report* [@emo_feasibility_2020], we foresee the indicators made in our sample reports with the following topics:
 
 -   **Report on the European Music Economy**: Support stakeholders with economic questions, such as taxation, price-setting and economic exploitation, and advocating for policies that better support the development of the industry or its parts like publishing [@open_music_europe_economy_repository].
 
@@ -85,9 +115,110 @@ Interactivity allows for exchange of ideas and a shared creation of the intended
 
 The *European Statistics Code of Practice* [@european_statistics_code_of_practice_2017] see the *Quality Assurance Framework of the European Statistical System* [@ESS_QAF_2019 pp. 45-46] goes a step further in interactivity. The idea of interactivity in the statistical indicator design process originates in the the European Commission's *more-than-information approach*: „Communication is more than information: it establishes a relationship and initiates a dialogue with European citizens, it listens carefully and it connects to people. It is not a neutral exercise devoid of value, it is an essential part of the political process." The Commission refers here instead of the 'target audience' to 'citizens' because communication is not just a technical exercise of message delivery but part of a democratic involvement of citizens [@kotzeva_towards_2017, p7.]. Similarly, a good business indicator is not only printed in the annual financial or sustainability reports of a company: it is often cited in management discussions or communicated by line managers to workers to direct their focus. To make indicators conversation-starters or arguments in professional discussions, we have to ensure their usability: we not only need to involve potential users in the design phase, but we have to get regular feedback on the usability and professional improvement of the indicators.
 
+# Data Infrastructure: The Music Industry Business Register Concept
+
+Statistical business registers (BR) are repositories of legal and statistical units to be used for producing business and macroeconomic statistics. They include information on the active population of:
+
+-   Enterprises carrying out economic activities which contribute to the gross domestic product (GDP);
+-   Legal units of which those enterprises consist of;
+-   Local units;
+-   Kind of activity units;
+-   Enterprise groups, incl. all-resident and multinational enterprise groups.
+
+In the current statistical infrastructure, each EU member state has set up a national statistical business register (NSBR) within their national statistical office on the basis of the European Regulation 2019/2152 [@eu_regulation_2019-2152], which updated earlier regulations in this field going back to 1993. These NSBRs connect to the government's tax authorities, company registration institutions like chambers of commerce or government company houses, and courts. They have an essential role in creating business statistics.
+
+NSBRs are not of identical quality across the EU; the motivation behind Regulation 2019/2152 was correcting some differences among member states. Furthermore, a long-known problem of the NSBRs is that they do not cover well very small enterprises [@eurostat_business_registers_manual_2021, pp. 43-44.], and certain industries are dominated by very small enterprises. The cultural and creative industries, and the music industry in particular, fall under these problematic areas.
+
+The earlier statistical guidelines suggested various forms of improvements that required either special projects between national statistical authorities and representative music industry bodies or were mandated by national authorities themselves. Without these special actions, it is not possible to create similar indicators for the music industry that exists, for example, for car manufacturing, paper production or electricity distribution.
+
+In Open Music Europe, we have no legal mandate to carry out such experiments, but based on the _Memorandum of Understanding on utilizing the Open Policy Analysis results of the OpenMusE Research and Innovation Consortium in the context of Slovak cultural and creative industries and sectors' public policies_ [@open_music_europe_sk_mou_2023], we will try to persuade the Slovak national authorities to carry out one; furthermore, we provide guidelines on how the music industry's representative (collective) organisations can take action themselves and produce similar indicators. To do this, we briefly review the role of business registers, and we outline the idea of the Music Industry Business Register (MIBR.)
+
+The Open Music Europe Data Management Plan follows the xxx in how it designs and carries out statistical data collection, and it should serve as a template for music industry organisations carrying out similar data collection on their own initiative (i.e., without the legal mandate granted by EU regulations to national statistical authorities of the member states.)
+
+## Data sources
+
+Statistical data is collected either from accounts or surveys. Accounts, in statistical terms, are consistently collected data sources. For example, royalty accounts, which follow the general accounting principles applied in all EU countries, with industry-specific further data organisation, are the correct sources of authors' and neighbouring rights (publishing and recording copyright) revenues. Reprex and ALOADED will demonstrate the use of such accounts for statistical productions in Open Music Europe in a way other stakeholders can replicate. In this case, the royalty accounts of ALOADED are a microdata source (non‐aggregated observations or measurements of characteristics of individual statistical units without direct identifiers.) The word `microdata` refers to the fact that we want to avoid the distribution of this highly confidential data specific to ALOADED and its clients, and we want to use it for a more general and aggregated data creation.
+
+When no standard form of data registration and accounting exists, statisticians like market researchers rely on constructing surveys. The word survey originally meant a systematic examination and recording of the area and features of (an area of land) to construct a map, plan, or description. Such surveys are still used in natural sciences or cartography. Still, in business and social sciences areas, it is used metaphorically for questionnaires that are filled out about statistical units (music companies, performing music groups) either by the statistical unit itself or by the surveyor. In our experience, the best music industry surveys are administered in face-to-face interviews, when the surveyors pre-fill certain information on a questionnaire (including information on the time and place of the interview, its length, and the cooperation level of the interviewed person) and other administers the answers given orally by the surveyed statistical unit. Due to cost considerations, self-administered surveys, such as online questionnaire forms, are often used; however, in this case, the survey is filled out by a music professional and not a statistician, and misunderstandings are unavoidable.
+
+The best way to collect statistical information is to rely on, whenever a high-quality account is available, this account itself; and use well-designed surveys with quality assurance to collect the rest of the information. In both cases, data protection rules must be adhered to at all times.
+
+## Creating the music industry statistical infrastructure
+
+The role of the business register is to provide a framework for the data collection to help establish precisely the target population of the data collection and carry out the surveying and microdata linking. For example, if a nationally representative organisation like SOZA in the Slovak Republic sets up the Slovak Music Industry Business Register (SKMIBR), then this enables us to collect systematic data on the Slovak music businesses in a way that we can create similar statistics to Eurostat and the Statistical Office of Slovakia.
+
+In previous years, the CEEMID project set up a very simple and not formalised business register for Hungary and Slovakia to create the first Hungarian national industry report and subsequent Artisjus reports, then built on this experience for surveying for the Slovak Music Industry Report. We also attempted to create a Croatian version. These experiences will be quoted for practical guidance. Statistical units
+
+An `Observation unit` or *statistical unit* is an identifiable entity about which data can be obtained. If we create statistics on the Slovak music industry, we must observe all units that professionally contribute to the economic value creation and output of the industry in Slovakia. If the person is a natural person, such as a freelance music performer or a freelance sound engineer, then the statistical unit is also a data subject in the language of the General Data Protection Regulation (GDPR).
+
+Regardless if we want to use questionnaires in surveys or we want to sample royalty accounts, we must be able who can answer the questions or provide us with accounting data: we need to define the geographical scope of our data collection and its economic (industry) scope.
+
+Business registers have a "live" component: the registrar must include new industry players at all times and delete deceased entities. A good starting point for this can be the list of legal and natural persons represented by music industry organisations in a given country. SOZA, for example, collects authors' rights (copyright) revenues on the territory of Slovakia and must identify the intellectual property owners. Therefore it has an up-to-date list of composers and publishers who make their music works available on the territory of the Slovak Republic. SLOVGRAM has a similar list of entities that release recordings in Slovakia or have significant business revenue from neighbouring rights. These membership and representation lists provide a good base for the "live" component of the SKMIBR. Because the administration of copyrights follows national jurisdictions, in this case, it is logical to create a national business registry.
+
+Footnote: From a technical, statistical point of view, it is important to notice that this registry can collect data on a domestic view (statistical units operating on the territory of Slovakia) and national view (statistical units domiciled for tax or residency purposes in Slovakia.)
+
+The voluntary SKMIR should follow as much as possible the actual national statistical business registry in Slovakia and provide more industry-specific detail when the national registry does not have it. In other words, it should use the same data definitions as the national authorities' business registry.
+
+Suppose the main purpose is data collection on publishing and recording parts of the music industry. In that case, the national copyright jurisdiction may be the best geographical frame for setting up a business registry. If we want to observe the live music industry, it may be more feasible to work on the metropolitan area/provincial/state level.
+
+All in all, a music industry business register must be able to clearly define who can and who cannot be a subject of data collection for the music industry: it must define the statistical units which are considered to be players of the music industry and whose data must be rejected, or simply not asked, because they are not part of the industry. The geographical coverage must also be defined. This defines the "business demography" of, for example, the music industry of Slovakia or Berlin.
+
+## Information sources on the business population
+
+Surveys can be census-like when we try to record data on all statistical units or based on a sample of the statistical units that well represent the entire population. It is important that we can move from the "live" business register to a more practical format. Suppose we want to collect annual data on the Slovak music industry. In that case, we must define a date or date range when we query the live business registry to define the population which counts into the 2023 music industry data collection. This will necessarily exclude a new music publisher starting and registering a business on the 2nd of January, 2024.
+
+The membership lists of collective management organisations are a very good starting point because the national copyright laws of the European Union (as harmonised by the Copyright Directive) make the membership lists of such organisations public; in other creative industries, we may not find such a well-defined and public registry. The advantage of a public registry is that we consider census-like data collection and sample-based at the same time.
+
+For example, for the members that operate as a legal persons, other legislation makes some of their business data public by law. Because legal personality is abstracted from the concept of natural personality, it is generally assumed that an abstract legal person can be known: its name, seat, and main financial records are public, so other stakeholders wishing to contract or work with this entity can get to know the "person". In our view, it is a necessary first step to connect such data to the music industry business registry, which can be seen as a first census of the industry.
+
+This preliminary census will differ from the data that the Slovak national statistical authority or Eurostat can provide to us. They work with a national business registry that does not use the membership list of music organisations. Instead, it uses the so-called NACE economic activity codes of the enterprises.
+
+Connecting NACE codes with the music industry is impossible for three reasons:
+
+1.  The music industry does not have a NACE code;
+2.  creative enterprises are commonly operating in several economic activity fields and may have several NACE codes;
+3.  National business registries do not contain a full view on very small enterprises and often do not include all freelancers, the most common working form in the music industry. These are the main reasons why we must construct the music industry business registry in the first place.
+
+In practice, the music industry business registry must create a mapping to subsets of the NACE classes in each country.
+
+[![The music industry value chain; adopted from the model used to map the Croatian music industry.](plots/Music_value_chain.png){fig-align="center" width="90%"}](https://doi.org/10.6084/m9.figshare.19174310.v1)
+
+## Preparation and coordination of surveys
+
+Most of the data gaps defined by the EMO Feasibility Study cannot be filled with such public data, and it is unlikely that the cost/benefit considerations of surveying would allow a census-like data collection beyond the data that these enterprises already made public. Therefore, the most important function of the SKMIBR in Slovakia is the preparation of the surveys that target only a sample of the relevant music industry preparation.
+
+In the past years, CEEMID used a less rigid framework that considered that some music industry players are not associated with SOZA or Artisjus, for example, in Slovakia and Hungary. Our experience in the preparation of surveying the Hungarian, Slovak, and Croatian music industries first, then moving on to many other countries, was that for the music industry stakeholders, it is always a cost/benefit decision itself if they join a collective rights management organisation, even if the choice of not joining (and registering an intellectual property) results in revenues that will never be paid to the music creator or the business entity.
+
+It is important to include as wide a range of stakeholders in the survey creation process as possible.
+
+The way CEEMID handled these problems is that it created a meta-registry: it produced anonymous surveys that allowed data entry by music professionals who were not associated with the collective rights management organisations but who were invited by trusted members or associations. For example, in Hungary, the national DJ association and Zenészbázis, a civil society organisation that was very critical towards the Hungarian collective management organisations, agreed to distribute our surveys. We then included data points in the survey that could be statistically (but not individually) connected with Artisjus's and SOZA's data in-house.
+
+::: {.callout-note collapse="true"}
+## Lessons from the Central European Music Industry Report
+
+When the CEEMID project created the *Central European Music Industry Report* [@antal_ceereport_2020], we failed to create a proper collection framework for Moldva because the country had weak institutions. In Armenia, due to the general mistrust of ARMAUTHOR, we created a private registry to collect data. This is understandable: creators base their membership and representation decisions on comparing the likely annual income and the cost of administration, and they often consider subjective criteria such as the justice of royalty distribution. When CEEMID started to work in Slovakia, the Slovak collective management organisations could distribute far less income than the Hungarian organisations, and we found a higher segment of the business demography that was not associated with these organisations. In Hungary and Slovakia, we realised that hip-hop creators are often missing from the membership list because they produce music that has lyrics which is too explicit for radio play or to be used as background music. As public performance revenues are the main income sources in the Central and Eastern European region, it is logical that creators who will not have such revenue do not register. In Open Music Europe, we see that Musicautor faces a more severe problem than SOZA did due to low revenue.
+:::
+
+The *Lessons from the Central European Music Industry Report* above show that already the population definition requires an intimate knowledge of the domain. The actual data needs assessment is also based on the domain knowledge of the collective music organisations. For example, we do not want to collect data that is already available or can be created in a more comprehensive, census-like manner: connecting membership data with public company registry data is almost certainly cheaper and more reliable than surveying. When we rely on questionnaires, we must assess what can be asked in a personal survey and an enterprise survey. The questions must be set to harmonise with statistical business surveys for comparability, on the one hand, and the target population understands them. In other words, we must frame the questions so that a music professional will likely give the information the statisticians want. This is challenging because, in the music industry, most business is led by creative people who only rarely have any formal or informal training in business administration and use business information in a very informal way.
+
+## Linking data and microdata
+
+A business registry is often a source of data itself or can provide metadata, i.e., factual statements about data that can assess the qualities of such data. Data linking is possible on both the microdata level and the statistically aggregated data level. Survey harmonisation techniques that Open Music Europe uses based on earlier CEEMID experience ensure that data collected in a survey is easily linked with either more precise microdata or at least with other statistically aggregated but more precise data sources.
+
+CEEMID has used questionnaire items that were standardised with the methodology created by the ESSNet-Culture working group of Eurostat and participating EU national statistical authorities [@de_haan_virtuele_2008; @frank_guy_essnet-culture_2012; @de_haan_nowadays_2012], mainly based on pre-existing best practices developed in the Netherlands. The ex ante harmonisations of questionnaire items (the same question is asked in the same format and with the same national language translations) are one of the prerequisites of joining data from surveys taken at different times, in different countries, or by different organisations. This practice has been developed by CEEMID since 2014 and further improved by the SurveyHarmonies project of SINUS and REPREX with the help of MusicAutor, SOZA, and Artisjus in 2023. It was also the basis of the development of \[retroharmonize\] R language software package hosted by the rOpenGov community, organised by the University of Turku Data Science group and actively developed by REPREX. Open Music Europe will continue to develop these methodologies and tools for creating a music economy, diversity surveys and collecting data on the societal and sustainability aspects of music.
+
+For example, CEEMID pioneered the semi-open anonymous music professional survey format. To ensure that the data collected from these surveys remains representative, we included questions about royalties collected from the participating collective management organisations like SOZA in the Slovak Republic or Artisjus in Hungary. We collected survey data from a quasi-open population until we found a 95 or 99% correlation between the self-reported income of unknown music professionals from SOZA and Artisjus and the actual annual distribution of the organisations (which was provided to the researchers in an anonymous vector of numbers to establish the true distribution of the surveyed quantity.) This is a simple form of data fusion or statistical data linking (See, for example, the Slovak Music Industry Report---Správa o slovenskom hudobnom priemysle [@antal_slovenskom_hudobnom_2019_en].).
+
+It is desirable to ask the surveyed statistical units to give us legal permission to connect their administrative records with their collective management organisation or other membership organisation, or their label or distributor. For example, if we want to know the most important territories and regions where a creator's music was listened to on DSPs, it may be difficult, time-consuming or even impossible for a respondent to fill this information onto a questionnaire text box. But with access to the person's distribution list or royalty account, we can retrieve this information precisely.
+
+In our vision, the SKMIBR is a voluntary registry created by the existing administrative records of membership organisations that are public by law and which allow the inclusion of other statistical units, including natural personas as data subjects, who do not wish to become members or give a mandate for representation in the maintaining organisations. However, they are still important constituents of the Slovak music industry. Maintaining the business registry needs to be very carefully designed from a data protection point of view, and the procedures for linking microdata also require strict rules that conform to GDPR in the case of natural persons and other business confidentiality and statistical data protection rules in the case of legal persons. The earlier experience of the CEEMID project is a good starting point.
+
+# References
+
 ## List of Figures
 
 Figure 1: *The statistical infrastructure of indicators*, DOI: [10.6084/m9.figshare.23600571](https://doi.org/10.6084/m9.figshare.23600571)\
-Figure 2: *Policy evaluation cycle with indicators*, DOI: [10.6084/m9.figshare.23498441](https://figshare.com/account/projects/129944/articles/23498441)
+Figure 2: *Policy evaluation cycle with indicators*, DOI: [10.6084/m9.figshare.23498441](https://figshare.com/account/projects/129944/articles/23498441)\
+Figure 3: *The music industry value chain; adopted from the model used to map the Croatian music industry,* DOI: [10.6084/m9.figshare.19174310.v1](https://doi.org/10.6084/m9.figshare.19174310.v1)
 
-## References
+## Bibliography
