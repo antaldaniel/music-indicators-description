@@ -6,7 +6,7 @@ toc: true
 lang: en-GB
 date: today
 DOI: 10.5281/zenodo.8108720
-title-block-banner: true
+title-block-banner: "#00348A"
 papersize: A4
 format:
   html: default
@@ -14,7 +14,8 @@ format:
     colorlinks: true
     latex: 
        - lof: true
-  docx: default
+  docx: 
+   reference-doc: docx/OpenMusE_simple_template.docx
   epub: 
    epub-cover-image: plots/cover_data_pillars_omo_small.png
 license: CC BY-ND
@@ -42,15 +43,17 @@ bibliography:
 {{< pagebreak >}}
 
 ::: callout-tip
-```{r printcover, echo=FALSE, out.width='50%', fig.align='center'}
+```{r printcover, echo=FALSE, out.width='100%', fig.align='center'}
 output_to <- ""
 output_to <- knitr::pandoc_to() 
 if ( !output_to %in% c("epub", "epub2")  ) {
-  knitr::include_graphics(here::here("plots", "cover_data_pillars_omo_small.png"))
+  knitr::include_graphics(here::here("plots", "Banner_Title_Pillars_of_the_Open_Music_Observatory.png"))
 }
 ```
 
-This is a manuscript developed for [Open Music Europe](https://openmuse.eu/) following the Open Policy Analysis Guidelines. All materials related to this research can be found in the open repository at <https://github.com/antaldaniel/music-indicators-description>. Bookmark this document as a [webpage](https://antaldaniel.github.io/music-indicators-description/music-indicators.html). Permanent storage and DOI: [Zenodo](https://zenodo.org/record/8096811).
+This is a manuscript developed for [Open Music Europe](https://openmuse.eu/) following the Open Policy Analysis Guidelines. All materials related to this research can be found in the open repository at <https://github.com/antaldaniel/music-indicators-description>. Bookmark this document as a [webpage](https://antaldaniel.github.io/music-indicators-description/music-observatory-pillars.html). Permanent storage and DOI: [Zenodo](https://zenodo.org/record/8108720).
+
+*Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Research Executive Agency. Neither the European Union nor the granting authority can be held responsible for them.*
 :::
 
 ---
@@ -60,7 +63,7 @@ nocite: |
 
 # Defining the Data-to-policy Pipeline
 
-`Open Music Europe` offers a 'data-to-policy' pipeline, which extends the music data pipeline to evidence-based business and policy administration. A data pipeline is a method in which raw data is ingested from various data sources and then ported to data store, for further analysis, in this case, to an open, shared, collaborative music observatory. We extend this pipeline using reproducible research techniques, a novel application of the *Open Policy Analysis Guidelines*, and good statistical practices to support evidence-based policy analysis, scientific music research and sound business strategy building. In this last leg of the pipeline, we emphasise usability for our project's target audiences and good documentation practices. We want to ensure that our data is high quality and well understood to support robust and correct business, scientific or policy conclusions. This usually makes processing the data into an indicator, or a set of indicators, which are often displayed as a scoreboard, dashboard, or as a part of a standardised business or policy report.
+`Open Music Europe` offers a 'data-to-policy' pipeline, which extends the music data pipeline to processing data that is ready to use in evidence-based business and policy administration. A data pipeline is a method in which raw data is ingested from various data sources and then ported to data store, for further analysis, in this case, to an open, shared, collaborative music observatory. We extend this pipeline using reproducible research techniques, a novel application of the *Open Policy Analysis Guidelines*, and good statistical practices to support evidence-based policy analysis, scientific music research and sound business strategy building. In this last leg of the pipeline, we emphasise usability for our project's target audiences and good documentation practices. We want to ensure that our data is high quality and well understood to support robust and correct business, scientific or policy conclusions. This usually makes processing the data into an indicator, or a set of indicators, which are often displayed as a scoreboard, dashboard, or as a part of a standardised business or policy report.
 
 ## Data coordination and ingestion
 
@@ -100,25 +103,19 @@ In an evidence-based policy cycle indicators should be provide different factual
 
 [![Figure 2. Policy evaluation cycle with indicators, DOI: 10.6084/m9.figshare.23498441](plots/policy_evaluation_cycle_with_indicators.jpg){#policy_evaluation_cycle_with_indicator fig-alt="Figure 2. Policy evaluation cycle with indicators, DOI: 10.6084/m9.figshare.23498441"}](https://doi.org/10.6084/m9.figshare.23498441)
 
-Several alternative options are available to deal with complexity, each one with specific properties that make them more or less fit for a given purpose. This short summary follows the _Communicating
-complexity_ in the Eurostat guide methodology book [@kotzeva_towards_2017, pp. 34-39.]. 
+Several alternative options are available to deal with complexity, each one with specific properties that make them more or less fit for a given purpose. This short summary follows the *Communicating complexity* in the Eurostat guide methodology book [@kotzeva_towards_2017, pp. 34-39.].
 
+1.  Developing indicator sets (including scoreboards or dashboards as specific types of sets) and showing all the information for each individual indicator.
 
-1. Developing indicator sets (including scoreboards or dashboards as specific types of sets) and showing all the information for each individual indicator.
+2.  Combine indicators on different phenomena and/or dimensions into aggregate, composite or synthetic indicators. A composite indicator is created when individual indicators with different measurements units are combined into a single measure.
 
-2. Combine indicators on different phenomena and/or dimensions into aggregate, composite or synthetic indicators. A composite indicator is created when individual indicators with different measurements units are combined into a single measure.
+3.  Show the detailed information on the individual indicators while combining the assessment in 'aggregated dashboards'.
 
-3. Show the detailed information on the individual indicators while combining the assessment in ‘aggregated dashboards’.
-
-Regarding the communication of complex subjects, Eurostat normally opts for sets of indicators often in a form of scoreboards or dashboards, and Open Music Europe will do the same, because composite indicators themselves require a higher level of data literacy to interpret correctly. 
+Regarding the communication of complex subjects, Eurostat normally opts for sets of indicators often in a form of scoreboards or dashboards, and Open Music Europe will do the same, because composite indicators themselves require a higher level of data literacy to interpret correctly.
 
 Scoreboards are concise lists of key performance indicators (often derived from a larger set) which are assessed against specific targets. Dashboards, on the other hand, do not necessarily have an evaluation function, in the sense that the observed indicator values are not necessarily compared to (policy) targets to assess performance[^2].
 
 [^2]: Dashboards are supposed to be very concise, with a very limited number of indicators. An often used example is the car 'dashboard', which has only few measurement instruments so that they can be monitored also by non-experts simultaneously.
-
-
-
-
 
 Following the data pillars of the *Feasibility study for the establishment of a European Music Observatory : final report* [@emo_feasibility_2020], we foresee the indicators made in our sample reports with the following topics:
 
@@ -145,31 +142,38 @@ Interactivity allows for exchange of ideas and a shared creation of the intended
 The *European Statistics Code of Practice* [@european_statistics_code_of_practice_2017] see the *Quality Assurance Framework of the European Statistical System* [@ESS_QAF_2019 pp. 45-46] goes a step further in interactivity. The idea of interactivity in the statistical indicator design process originates in the the European Commission's *more-than-information approach*: „Communication is more than information: it establishes a relationship and initiates a dialogue with European citizens, it listens carefully and it connects to people. It is not a neutral exercise devoid of value, it is an essential part of the political process." The Commission refers here instead of the 'target audience' to 'citizens' because communication is not just a technical exercise of message delivery but part of a democratic involvement of citizens [@kotzeva_towards_2017, p7.]. Similarly, a good business indicator is not only printed in the annual financial or sustainability reports of a company: it is often cited in management discussions or communicated by line managers to workers to direct their focus. To make indicators conversation-starters or arguments in professional discussions, we have to ensure their usability: we not only need to involve potential users in the design phase, but we have to get regular feedback on the usability and professional improvement of the indicators.
 
 ## Building a European Music Observatory
-The European music stakeholders would like to see a solution “as a centralised music data and an intelligence hub at [the] European level” with the creation of the European Music Observatory [@emo_feasibility_2020]. As a Finnish example and CEEMID have shown, the inherent conflicts of interest and the presence of many microenterprises favour the incorporation of decentralised approaches, too  [@osimo_symphony_2019]. The EMO Feasibility Study also stresses the need to learn from the CEEMID project and exploit richer open data sources, which usually require the development of open-source processing capacities.
 
-According to the study published by the European Commission on the impact of open-source software (OSS) and open-source hardware (OSH) on the European economy, conducted by Fraunhofer ISI and Open Forum Europe on 6 September 2021, open-source software contributed between €65 to €95 billion to the European Union’s GDP [@eu_ossh_study_2021]. It promises significant growth opportunities for the region’s digital economy. The 2020 report on the _Economic Value of Open Data_ estimated the value of open data available in the European economy at €184 billion and is forecasted to reach between €199.51 and €334.21 billion in 2025 [@huyer_economic_2020]. To unlock this potential, the study makes similar but less specific recommendations as the OSS/OSH study described above.
+The European music stakeholders would like to see a solution "as a centralised music data and an intelligence hub at \[the\] European level" with the creation of the European Music Observatory [@emo_feasibility_2020]. As a Finnish example and CEEMID have shown, the inherent conflicts of interest and the presence of many microenterprises favour the incorporation of decentralised approaches, too [@osimo_symphony_2019]. The EMO Feasibility Study also stresses the need to learn from the CEEMID project and exploit richer open data sources, which usually require the development of open-source processing capacities.
 
-The `Open Music Europe` project and its grants aim to build an Open Music Observatory based on the Reprex background minimum viable product, the Digital Music Observatory. The OMO aims to develop the Digital Music Observatory further and fill up four "data pillars" as defined by the EMO Feasibility Study to reach Technical Readiness Level (TLR) 7: a system prototype demonstration in an operational environment for Horizon Europe scientific research outputs, pan-European use by representative music stakeholders, and proven ability to scale up various pillars to further national environments. We want to accomplish this goal with as many  OSSH and open data components as possible.
+According to the study published by the European Commission on the impact of open-source software (OSS) and open-source hardware (OSH) on the European economy, conducted by Fraunhofer ISI and Open Forum Europe on 6 September 2021, open-source software contributed between €65 to €95 billion to the European Union's GDP [@eu_ossh_study_2021]. It promises significant growth opportunities for the region's digital economy. The 2020 report on the *Economic Value of Open Data* estimated the value of open data available in the European economy at €184 billion and is forecasted to reach between €199.51 and €334.21 billion in 2025 [@huyer_economic_2020]. To unlock this potential, the study makes similar but less specific recommendations as the OSS/OSH study described above.
+
+The `Open Music Europe` project and its grants aim to build an Open Music Observatory based on the Reprex background minimum viable product, the Digital Music Observatory. The OMO aims to develop the Digital Music Observatory further and fill up four "data pillars" as defined by the EMO Feasibility Study to reach Technical Readiness Level (TLR) 7: a system prototype demonstration in an operational environment for Horizon Europe scientific research outputs, pan-European use by representative music stakeholders, and proven ability to scale up various pillars to further national environments. We want to accomplish this goal with as many OSSH and open data components as possible.
 
 The `Music Economy Pillar` will help the better valuation and business representation of European music and the creation of more jobs, revenues, and gross value added in the sector with data and evidence for better policies and better business strategies. WP1 of Open Music Europe plans to fill this pillar with an initial set of indicators that serve this purpose. This means that the data and visualisation output from WP1 T1.2 are incepted as the new economy pillar.
 
 The `Diversity and Circulation Pillar` will prevent unnecessary music import into market segments where European creators suffer from weak institutions that put them at a competitive disadvantage. Furthermore, it would help European creators and music businesses to develop business and public cultural export strategies to find new export markets. How we design this pillar of the OMO would also support designing better local content regulations and better monitoring and enforcement of them. This means that the data and visualisation output from WP2 T2.2 are incepted as this new diversity pillar.
 
-The `Music, Society, Citizenship Pillar` will support better music education and better cultural policies by providing data on the non-economic value of music. The way we plan the initial data assets of this pillar can support the development of Environmental, Social and Governance (ESG) management, control, and reporting tools with reliable, science-based benchmarks. Environmentally and socially more sustainable business administration of music and fighting various forms of bribery in music requires high-quality data that is best collected, processed and disseminated in a data observatory. 
+The `Music, Society, Citizenship Pillar` will support better music education and better cultural policies by providing data on the non-economic value of music. The way we plan the initial data assets of this pillar can support the development of Environmental, Social and Governance (ESG) management, control, and reporting tools with reliable, science-based benchmarks. Environmentally and socially more sustainable business administration of music and fighting various forms of bribery in music requires high-quality data that is best collected, processed and disseminated in a data observatory.
 
-The `Innovation Pillar` will be helping other third-party music innovators with open data. 
+The `Innovation Pillar` will be helping other third-party music innovators with open data.
 
-The delivery has two alternatives, contingent on the results of T5.3 exploitation plans and the development of the planned official _European Music Observatory_. The observatory will reach TLR 7 and be handed over to the European Music Observatory as a functional reproducible research, open and big data collection part of the future institutions.
+The delivery has two alternatives, contingent on the results of T5.3 exploitation plans and the development of the planned official *European Music Observatory*. The observatory will reach TLR 7 and be handed over to the European Music Observatory as a functional reproducible research, open and big data collection part of the future institutions.
 
-Should the planned, official European Music Observatory fail to be completed by the end of 2025 or will not be in the position to receive the OMO as a complete system, all fallback option is to include the OMO in the _Digital Music Observatory_ at TRL Level 8 with a business continuation plan, but with limited funding and servicing capacity (a complete and operational data observatory without official recognition, with a limited budget and servicing capacity as an open collaboration project open to any representative national or EU music stakeholder organisation.)
+Should the planned, official European Music Observatory fail to be completed by the end of 2025 or will not be in the position to receive the OMO as a complete system, all fallback option is to include the OMO in the *Digital Music Observatory* at TRL Level 8 with a business continuation plan, but with limited funding and servicing capacity (a complete and operational data observatory without official recognition, with a limited budget and servicing capacity as an open collaboration project open to any representative national or EU music stakeholder organisation.)
 
 # Data coordination and ingestion
+
+`Open Music Europe` offers a 'data-to-policy' pipeline, which extends the music data pipeline to processing data that is ready to use in evidence-based business and policy administration. This requires the coordinated ingestion of pre-existing data that is readily available and what needs to be processed, or where further data needs to be collected by primary statistical data collection methods.
+
+[![Data coordination in the data-to-policy pipeline](plots/data-to-poliy-pipeline-coordination.png){width="90%" fig-align="center"}](https://figshare.com/articles/figure/Data_Coordination_in_the_Data-to-Policy_Pipeline/23618811)
+
+When the data is available in a trustworthy data sources, we will still reprocess it.
 
 ## Curated statistical data
 
 In the last two decades, the availability of statistical data increased to the extent that non-professional users often do not find the information they need. Furthermore, statistical authorities increasingly release data that is less processed and requires statistical and domain-specific know-how to transform into a form that music professionals and researchers, or policy-makers can readily use.
 
-Our seemingly trivial first data pipelines are building access to curated and if needed, re-processed statistical data towards high-quality statistical data sources. The rOpenGov collaboration maintained by the University of Turku, where REPREX is an active developer, provides reproducible tools to access such sources. These tools will be further developed into a statistical ecosystem with a more friendly user interface in WP4.
+Our seemingly trivial first data pipelines are building access to curated and if needed, re-processed statistical data towards high-quality statistical data sources. The [rOpenGov](https://ropengov.org/) collaboration maintained by the University of Turku, where REPREX is an active developer, provides reproducible tools to access such sources. These tools will be further developed into a statistical ecosystem with a more friendly user interface in WP4.
 
 A good example of these tools will be used and further developed in WP3. The iotables R package on rOpenGov, developed by the leadership of REPREX, provides access to the Eurostat data warehouse's symmetric input-output data. Symmetric input-output and auxiliary tables connect thousands of poorly usable statistical indicators into analytical tables, which can be used for various economic analyses and social or environmental impact assessments. The iotables package helps the user to bring together the necessary data from Eurostat's data warehouse (that includes that from the European Environmental Agency) and perform data processing and algebraic transformations that result in readily-usable indicators and multipliers. This service can be seen as a middleware between data processing and data analysis: most analysts who know how to work with the Leontieff- or Ghosh system to work with this data would spend days just to put together the necessary indicators from the original source.
 
@@ -227,7 +231,84 @@ Because `WP3` has no methodological budget for developing such a framework, it w
 
 In WP4 we want to foster innovative data uses in the music sector. Our aim here is to provide a more general framework for data access and data improvement for novel, innovative data-driven technologies and workflows that can support the music industry.
 
-# Data Infrastructure: The Music Industry Business Register Concept
+
+## Data collection
+
+Statistical data is collected either from accounts or surveys. Accounts, in statistical terms, are consistently collected data sources. For example, royalty accounts, which follow the general accounting principles applied in all EU countries, with industry-specific further data organisation, are the correct sources of authors' and neighbouring rights (publishing and recording copyright) revenues. Reprex and ALOADED will demonstrate the use of such accounts for statistical productions in Open Music Europe in a way other stakeholders can replicate. In this case, the royalty accounts of ALOADED are a microdata source (non‐aggregated observations or measurements of characteristics of individual statistical units without direct identifiers.) The word `microdata` refers to the fact that we want to avoid the distribution of this highly confidential data specific to ALOADED and its clients, and we want to use it for a more general and aggregated data creation.
+
+When no standard form of data registration and accounting exists, statisticians like market researchers rely on constructing surveys. The word survey originally meant a systematic examination and recording of the area and features of (an area of land) to construct a map, plan, or description. Such surveys are still used in natural sciences or cartography. Still, in business and social sciences areas, it is used metaphorically for questionnaires that are filled out about statistical units (music companies, performing music groups) either by the statistical unit itself or by the surveyor. In our experience, the best music industry surveys are administered in face-to-face interviews, when the surveyors pre-fill certain information on a questionnaire (including information on the time and place of the interview, its length, and the cooperation level of the interviewed person) and other administers the answers given orally by the surveyed statistical unit. Due to cost considerations, self-administered surveys, such as online questionnaire forms, are often used; however, in this case, the survey is filled out by a music professional and not a statistician, and misunderstandings are unavoidable.
+
+The best way to collect statistical information is to rely on, whenever a high-quality account is available, this account itself; and use well-designed surveys with quality assurance to collect the rest of the information. In both cases, data protection rules must be adhered to at all times.
+
+# The Music Economy Data Pillar
+
+::: {.callout-caution collapse="false"}
+## This part will be detached as a separate document
+
+The first part of the document is helpful for the creation of `D2.1` and `D3.1`, and `D4.1`, and it will be the first manuscript of D5.1, which creates the data-to-policy pipeline. `D1.1` will summarise it to the necessary length.
+:::
+
+To start the `T1.2` task, we must create the first version of the data needs assessment based on pre-existing documents and then curate and specify the data sources. 
+
+1. What are the data needs of the stakeholders? What kind of indicators would satisfy them? See [WP1 Data needs assesment](#wp1-data-needs-assessment).
+2. Can we find reusable data for the creation of these indicators? See [Public Sector Information Reuse](#wp1-psi).
+3. If we have to collect the data ourselves, how must we ensure with an appropriate statistical registry that the data will be compatible with pre-existing data? See [WP1 Data coordination](#wp1-data-coordination).
+4. We must set up harmonisation protocols, for example, to identify existing natural persons and enterprise surveys that contain the relevant data; find corporate or national accounts that we can use. See [WP1 Linking data and microdata](#wp1-data-linking).
+5. We must give instructions on how to ingest or collect the data and how to process it to the correct indicator dataset. 
+6. We should create indicator prototypes before we scale up data collection in T1.2. (The [Data collection: Surveys](#wp1-data-collection-surveys) leads towards the `T1.2` task.)
+
+[![Recap: The data coordination of the data-to-policy pipeline](plots/data-to-poliy-pipeline-coordination.png){widht="90%" fig-align="center"}](https://figshare.com/articles/figure/Data_Coordination_in_the_Data-to-Policy_Pipeline/23618811)
+
+## Data needs assessment {#wp1-data-needs-assessment}
+
+The Open Music Europe project plan and grant agreement foresees the development of an open science and open data service which complements the existing statistical service of Eurostat. In partnership with key music industry and policy partners, we are going to fill as much as possible from the approximately 41 data gaps within the policy context of *Music Moves Europe*, as identified by the *Feasibility Study for a European Music Observatory*. We will **develop key performance indicators** for music businesses and **policy indicators** to \"better detect the performance of the European music sector and its contribution to economic and social development, as well as to sustainability.\"
+
+The starting point of our needs assessment is a critical revision of the EMO Feasibility Study. In Europe, most cultural policies are carried out on the national level. Because of the territorial (national) nature of copyright data management, for many business players, this is the most likely level of data need. Because we are focusing on Slovakia for the pilot indicators, we will develop first in Slovakia, then replication in Bulgaria our first sets of indicators, even though our work is not constrained to these countries. We aim to design indicators that can be created for any EU member state, and whenever possible for (possible) candidate and neighbourhood countries, and even for comparison with other countries in the world.
+
+At the proposal stage, we mad the following pre-assessment of the data availability for WP1. In the case of `Pillar 1 – Music & Economy`, we are usually able to locate the source of the data, and we have some experience in processing the data and bringing it to light. We have mapped many perceived data gaps to the various data harmonization projects of GESAC and CISAC, and we will seek cooperation with these organizations and their members to find a secure and voluntary way to retrieve the data. The only data gap that we do not intent do address is the "impact of the non-profit sector".
+
+```{r printdatagaptable1, results='asis', echo=FALSE, out.width='90%', fig.align='center'}
+output_to <- "" 
+output_to <- knitr::pandoc_to()  
+if ( output_to %in% c("html", "epub", "epub2")  ) { cat(readLines(here::here("data-raw", "pillar_1_table.html"))) }
+```
+
+```{r printdatagaptable1alt, echo=FALSE, out.width='80%', fig.align='center'}
+output_to <- ""
+output_to <- knitr::pandoc_to()  
+if (! output_to %in% c("html", "epub", "epub2")  ) { 
+  knitr::include_graphics(here::here("plots", "pillar_1_table.png")) 
+}
+```
+
+## WP1 Public Sector Information Reuse {#wp1-psi}
+
+::: {.callout-note collapse="false"}
+## Identify existing data
+
+We need to identify existing microdata in the Slovak statistical office, SOZA and partners and in the Eurostat data warehouse that can be used to create the desired indicators. 
+
+:::
+
+Any preliminary census or survey that we will initiate (see [WP1 Data coordination](#wp1-data-coordination)) will differ from the data that the Slovak national statistical authority or Eurostat can provide to us. They work with a national business registry that does not use the membership list of music organisations. Instead, it uses the so-called NACE economic activity codes of the enterprises.
+
+Connecting NACE codes with the music industry is impossible for three reasons:
+
+1.  The music industry does not have a NACE code;
+2.  creative enterprises are commonly operating in several economic activity fields and may have several NACE codes;
+3.  National business registries do not contain a full view on very small enterprises and often do not include all freelancers, the most common working form in the music industry. These are the main reasons why we must construct the music industry business registry in the first place.
+
+In practice, the music industry business registry must create a mapping to subsets of the NACE classes in each country.
+
+[![The music industry value chain; adopted from the model used to map the Croatian music industry.](plots/Music_value_chain.png){fig-align="center" width="90%"}](https://doi.org/10.6084/m9.figshare.19174310.v1)
+
+Because of the mappping need, there is significant data coordination is needed before we can reuse data from pre-existing statistical (micro)data sources, or other company sources.
+
+## Data coordination {#wp1-data-coordination}
+
+A _statistical register_ is a continuously or regularly updated set of objects for a given population. It contains information on identification and accessibility of population units as well as other attributes which support the surveying process of the population. The Statistical register should contain the current and historical statuses of the population and the causes, effects and sources of alterations in the population. Statistical register are stored in a structured database.
+
+### Data Infrastructure: The Music Industry Business Register Concept
 
 Statistical business registers (BR) are repositories of legal and statistical units to be used for producing business and macroeconomic statistics. They include information on the active population of:
 
@@ -243,39 +324,25 @@ NSBRs are not of identical quality across the EU; the motivation behind Regulati
 
 The earlier statistical guidelines suggested various forms of improvements that required either special projects between national statistical authorities and representative music industry bodies or were mandated by national authorities themselves. Without these special actions, it is not possible to create similar indicators for the music industry that exists, for example, for car manufacturing, paper production or electricity distribution.
 
-In Open Music Europe, we have no legal mandate to carry out such experiments, but based on the *Memorandum of Understanding on utilizing the Open Policy Analysis results of the OpenMusE Research and Innovation Consortium in the context of Slovak cultural and creative industries and sectors' public policies* [@open_music_europe_sk_mou_2023], we will try to persuade the Slovak national authorities to carry out one; furthermore, we provide guidelines on how the music industry's representative (collective) organisations can take action themselves and produce similar indicators. To do this, we briefly review the role of business registers, and we outline the idea of the Music Industry Business Register (MIBR.)
+In `Open Music Europe`, we have no legal mandate to carry out such experiments, but based on the *Memorandum of Understanding on utilizing the Open Policy Analysis results of the OpenMusE Research and Innovation Consortium in the context of Slovak cultural and creative industries and sectors' public policies* [@open_music_europe_sk_mou_2023], we will try to persuade the Slovak national authorities to carry out one; furthermore, we provide guidelines on how the music industry's representative (collective) organisations can take action themselves and produce similar indicators. To do this, we briefly review the role of business registers, and we outline the idea of the Music Industry Business Register (MIBR.)
 
-The Open Music Europe Data Management Plan follows the xxx in how it designs and carries out statistical data collection, and it should serve as a template for music industry organisations carrying out similar data collection on their own initiative (i.e., without the legal mandate granted by EU regulations to national statistical authorities of the member states.)
+The `Open Music Europe` `Data Management Plan` follows the _European Statistics Code of Practice — revised edition 2017_ and the _Quality Assurance Framework of the European Statistical System. 2019 edition (Version 2.0)_, besides the terminology and procedures defined by the current EU statistical program on how it designs and carries out statistical data collection
+[@eu_regulation_2019-2152; @european_statistics_code_of_practice_2017; @ESS_QAF_2019]. It should serve as a template for music industry organisations carrying out similar data collection on their own initiative (i.e., without the legal mandate granted by EU regulations to national statistical authorities of the member states), to maintain maximum compatibility with pre-existing statistical products.
 
-## Data collection
 
-Statistical data is collected either from accounts or surveys. Accounts, in statistical terms, are consistently collected data sources. For example, royalty accounts, which follow the general accounting principles applied in all EU countries, with industry-specific further data organisation, are the correct sources of authors' and neighbouring rights (publishing and recording copyright) revenues. Reprex and ALOADED will demonstrate the use of such accounts for statistical productions in Open Music Europe in a way other stakeholders can replicate. In this case, the royalty accounts of ALOADED are a microdata source (non‐aggregated observations or measurements of characteristics of individual statistical units without direct identifiers.) The word `microdata` refers to the fact that we want to avoid the distribution of this highly confidential data specific to ALOADED and its clients, and we want to use it for a more general and aggregated data creation.
+### Slovak Music Industry Business Register Concept
 
-When no standard form of data registration and accounting exists, statisticians like market researchers rely on constructing surveys. The word survey originally meant a systematic examination and recording of the area and features of (an area of land) to construct a map, plan, or description. Such surveys are still used in natural sciences or cartography. Still, in business and social sciences areas, it is used metaphorically for questionnaires that are filled out about statistical units (music companies, performing music groups) either by the statistical unit itself or by the surveyor. In our experience, the best music industry surveys are administered in face-to-face interviews, when the surveyors pre-fill certain information on a questionnaire (including information on the time and place of the interview, its length, and the cooperation level of the interviewed person) and other administers the answers given orally by the surveyed statistical unit. Due to cost considerations, self-administered surveys, such as online questionnaire forms, are often used; however, in this case, the survey is filled out by a music professional and not a statistician, and misunderstandings are unavoidable.
-
-The best way to collect statistical information is to rely on, whenever a high-quality account is available, this account itself; and use well-designed surveys with quality assurance to collect the rest of the information. In both cases, data protection rules must be adhered to at all times.
-
-# The Music Economy Data Pillar
-
-## Data needs assessment
-
-## Existing data sources
-
-## Data coordination
-
-A Statistical register is a continuously or regularly updated set of objects for a given population. It contains information on identification and accessibility of population units as well as other attributes which support the surveying process of the population. The Statistical register should contain the current and historical statuses of the population and the causes, effects and sources of alterations in the population. Statistical register are stored in a structured database.
-
-The role of the business register is to provide a framework for the data collection to help establish precisely the target population of the data collection and carry out the surveying and microdata linking. For example, if a nationally representative organisation like SOZA in the Slovak Republic sets up the Slovak Music Industry Business Register (SKMIBR), then this enables us to collect systematic data on the Slovak music businesses in a way that we can create similar statistics to Eurostat and the Statistical Office of Slovakia.
+The role of the business register is to provide a framework for the data collection to help establish precisely the target population of the data collection and carry out the surveying and microdata linking. For example, if a nationally representative organisation like SOZA in the Slovak Republic sets up the Slovak Music Industry Business Register (`SKMIBR`), then this enables us to collect systematic data on the Slovak music businesses in a way that we can create similar statistics to Eurostat and the Statistical Office of Slovakia.
 
 In previous years, the CEEMID project set up a very simple and not formalised business register for Hungary and Slovakia to create the first Hungarian national industry report and subsequent Artisjus reports, then built on this experience for surveying for the Slovak Music Industry Report. We also attempted to create a Croatian version. These experiences will be quoted for practical guidance. Statistical units
 
-An `Observation unit` or *statistical unit* is an identifiable entity about which data can be obtained. If we create statistics on the Slovak music industry, we must observe all units that professionally contribute to the economic value creation and output of the industry in Slovakia. If the person is a natural person, such as a freelance music performer or a freelance sound engineer, then the statistical unit is also a data subject in the language of the General Data Protection Regulation (GDPR).
+An `observation unit` or *statistical unit* is an identifiable entity about which data can be obtained. If we create statistics on the Slovak music industry, we must observe all units that professionally contribute to the economic value creation and output of the industry in Slovakia. If the person is a natural person, such as a freelance music performer or a freelance sound engineer, then the statistical unit is also a data subject in the language of the General Data Protection Regulation (GDPR).
 
 Regardless if we want to use questionnaires in surveys or we want to sample royalty accounts, we must be able who can answer the questions or provide us with accounting data: we need to define the geographical scope of our data collection and its economic (industry) scope.
 
-Business registers have a "live" component: the registrar must include new industry players at all times and delete deceased entities. A good starting point for this can be the list of legal and natural persons represented by music industry organisations in a given country. SOZA, for example, collects authors' rights (copyright) revenues on the territory of Slovakia and must identify the intellectual property owners. Therefore it has an up-to-date list of composers and publishers who make their music works available on the territory of the Slovak Republic. SLOVGRAM has a similar list of entities that release recordings in Slovakia or have significant business revenue from neighbouring rights. These membership and representation lists provide a good base for the "live" component of the SKMIBR. Because the administration of copyrights follows national jurisdictions, in this case, it is logical to create a national business registry.
+Business registers have a "live" component: the registrar must include new industry players at all times and delete deceased entities. A good starting point for this can be the list of legal and natural persons represented by music industry organisations in a given country. SOZA, for example, collects authors' rights (copyright) revenues on the territory of Slovakia and must identify the intellectual property owners. Therefore it has an up-to-date list of composers and publishers who make their music works available on the territory of the Slovak Republic. SLOVGRAM has a similar list of entities that release recordings in Slovakia or have significant business revenue from neighbouring rights. These membership and representation lists provide a good base for the "live" component of the SKMIBR. Because the administration of copyrights follows national jurisdictions, in this case, it is logical to create a national business registry[^6].
 
-Footnote: From a technical, statistical point of view, it is important to notice that this registry can collect data on a domestic view (statistical units operating on the territory of Slovakia) and national view (statistical units domiciled for tax or residency purposes in Slovakia.)
+[^6]: From a technical, statistical point of view, it is important to notice that this registry can collect data on a domestic view (statistical units operating on the territory of Slovakia) and national view (statistical units domiciled for tax or residency purposes in Slovakia.)
 
 The voluntary SKMIR should follow as much as possible the actual national statistical business registry in Slovakia and provide more industry-specific detail when the national registry does not have it. In other words, it should use the same data definitions as the national authorities' business registry.
 
@@ -291,31 +358,15 @@ The membership lists of collective management organisations are a very good star
 
 For example, for the members that operate as a legal persons, other legislation makes some of their business data public by law. Because legal personality is abstracted from the concept of natural personality, it is generally assumed that an abstract legal person can be known: its name, seat, and main financial records are public, so other stakeholders wishing to contract or work with this entity can get to know the "person". In our view, it is a necessary first step to connect such data to the music industry business registry, which can be seen as a first census of the industry.
 
-## Data collection
-
-### PSI
-
-This preliminary census will differ from the data that the Slovak national statistical authority or Eurostat can provide to us. They work with a national business registry that does not use the membership list of music organisations. Instead, it uses the so-called NACE economic activity codes of the enterprises.
-
-Connecting NACE codes with the music industry is impossible for three reasons:
-
-1.  The music industry does not have a NACE code;
-2.  creative enterprises are commonly operating in several economic activity fields and may have several NACE codes;
-3.  National business registries do not contain a full view on very small enterprises and often do not include all freelancers, the most common working form in the music industry. These are the main reasons why we must construct the music industry business registry in the first place.
-
-In practice, the music industry business registry must create a mapping to subsets of the NACE classes in each country.
-
-[![The music industry value chain; adopted from the model used to map the Croatian music industry.](plots/Music_value_chain.png){fig-align="center" width="90%"}](https://doi.org/10.6084/m9.figshare.19174310.v1)
-
-### Linking
+### WP1 Linking data and microdata {#wp1-data-linking}
 
 A business registry is often a source of data itself or can provide metadata, i.e., factual statements about data that can assess the qualities of such data. Data linking is possible on both the microdata level and the statistically aggregated data level. Survey harmonisation techniques that Open Music Europe uses based on earlier CEEMID experience ensure that data collected in a survey is easily linked with either more precise microdata or at least with other statistically aggregated but more precise data sources.
 
 It is desirable to ask the surveyed statistical units to give us legal permission to connect their administrative records with their collective management organisation or other membership organisation, or their label or distributor. For example, if we want to know the most important territories and regions where a creator's music was listened to on DSPs, it may be difficult, time-consuming or even impossible for a respondent to fill this information onto a questionnaire text box. But with access to the person's distribution list or royalty account, we can retrieve this information precisely.
 
-### Surveys
+## WP1 Data collection: Surveys {#wp1-data-collection-surveys}
 
-Most of the data gaps defined by the EMO Feasibility Study cannot be filled with such public data, and it is unlikely that the cost/benefit considerations of surveying would allow a census-like data collection beyond the data that these enterprises already made public. Therefore, the most important function of the SKMIBR in Slovakia is the preparation of the surveys that target only a sample of the relevant music industry preparation.
+Most of the data gaps defined by the _EMO Feasibility Study_ cannot be filled with such public data, and it is unlikely that the cost/benefit considerations of surveying would allow a census-like data collection beyond the data that these enterprises already made public. Therefore, the most important function of the SKMIBR in Slovakia is the preparation of the surveys that target only a sample of the relevant music industry preparation.
 
 In the past years, CEEMID used a less rigid framework that considered that some music industry players are not associated with SOZA or Artisjus, for example, in Slovakia and Hungary. Our experience in the preparation of surveying the Hungarian, Slovak, and Croatian music industries first, then moving on to many other countries, was that for the music industry stakeholders, it is always a cost/benefit decision itself if they join a collective rights management organisation, even if the choice of not joining (and registering an intellectual property) results in revenues that will never be paid to the music creator or the business entity.
 
@@ -323,7 +374,7 @@ It is important to include as wide a range of stakeholders in the survey creatio
 
 The way CEEMID handled these problems is that it created a meta-registry: it produced anonymous surveys that allowed data entry by music professionals who were not associated with the collective rights management organisations but who were invited by trusted members or associations. For example, in Hungary, the national DJ association and Zenészbázis, a civil society organisation that was very critical towards the Hungarian collective management organisations, agreed to distribute our surveys. We then included data points in the survey that could be statistically (but not individually) connected with Artisjus's and SOZA's data in-house.
 
-::: {.callout-note collapse="true"}
+::: {.callout-note collapse="false"}
 ## Lessons from the Central European Music Industry Report
 
 When the CEEMID project created the *Central European Music Industry Report* [@antal_ceereport_2020], we failed to create a proper collection framework for Moldva because the country had weak institutions. In Armenia, due to the general mistrust of ARMAUTHOR, we created a private registry to collect data. This is understandable: creators base their membership and representation decisions on comparing the likely annual income and the cost of administration, and they often consider subjective criteria such as the justice of royalty distribution. When CEEMID started to work in Slovakia, the Slovak collective management organisations could distribute far less income than the Hungarian organisations, and we found a higher segment of the business demography that was not associated with these organisations. In Hungary and Slovakia, we realised that hip-hop creators are often missing from the membership list because they produce music that has lyrics which is too explicit for radio play or to be used as background music. As public performance revenues are the main income sources in the Central and Eastern European region, it is logical that creators who will not have such revenue do not register. In Open Music Europe, we see that Musicautor faces a more severe problem than SOZA did due to low revenue.
@@ -337,19 +388,22 @@ For example, CEEMID pioneered the semi-open anonymous music professional survey 
 
 ## Reproducible exploitation of the data
 
+This is the `T1.3`.
+
 ## Towards exploitation pathways
 
-## Linking data and microdata
+This is a connection to the`D5.2` _Dissemination, Communication and Exploitation Plan_ and the `D6.3` _Data Management Plan_. 
 
 # References
 
-https://doi.org/10.6084/m9.figshare.23617563.v1
+## List of figures
 
-## List of Figures
+Antal, Daniel (2023). Data Coordination in the Data-to-Policy Pipeline. figshare. Figure. https://doi.org/10.6084/m9.figshare.23618811.v1
 
 Figure 1: *The statistical infrastructure of indicators*, DOI: [10.608](https://doi.org/10.6084/m9.figshare.23600571)[4](https://doi.org/10.6084/m9.figshare.23600571){target="_blank"}[/m9.figshare.23600571](https://doi.org/10.6084/m9.figshare.23600571)\
 Figure 2: *The policy cycle*, DOI: [10.6084/m9.figshare.23617563](https://doi.org/10.6084/m9.figshare.23617563.v1){target="_blank"}\
 Figure 3: *Policy evaluation cycle with indicators*, DOI: [10.6084/m9.figshare.23498441](https://figshare.com/account/projects/129944/articles/23498441){target="_blank"}\
+Figure 4: *Data coordination in the data-to-policy pipeline,* DOI: [10.6084/m9.figshare.23618811.v1](https://figshare.com/articles/figure/Data_Coordination_in_the_Data-to-Policy_Pipeline/23618811)\
 Figure 4: *The music industry value chain; adopted from the model used to map the Croatian music industry,* DOI: [10.6084/m9.figshare.19174310.v1](https://doi.org/10.6084/m9.figshare.19174310.v1){target="_blank"}
 
 ## Bibliography
