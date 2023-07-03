@@ -1,10 +1,11 @@
 ---
-title: "Indicators in Open Music Europe"
+title: "Data Pillars in the Open Music Observatory"
+subtitle: "Version 0.1.0"
 author: "Daniel Antal"
 toc: true
 lang: en-GB
 date: today
-DOI: 10.5281/zenodo.8096811
+DOI: 10.5281/zenodo.8108720
 title-block-banner: true
 papersize: A4
 format:
@@ -15,7 +16,7 @@ format:
        - lof: true
   docx: default
   epub: 
-   epub-cover-image: plots/cover_music_indicators_in_openmuse.png
+   epub-cover-image: plots/cover_data_pillars_omo_small.png
 license: CC BY-ND
 editor: visual
 nocite: |
@@ -28,10 +29,13 @@ keywords:
 bibliography:
 - bib/capsurveys.bib
 - bib/ceemid.bib
+- bib/datalinking.bib
 - bib/indicators.bib
 - bib/figures.bib
 - bib/OpenMusE.bib
 - bib/openmusicrepositories.bib
+- bib/opendata.bib
+- bib/ossh.bib
 - bib/statreg.bib
 ---
 
@@ -42,7 +46,7 @@ bibliography:
 output_to <- ""
 output_to <- knitr::pandoc_to() 
 if ( !output_to %in% c("epub", "epub2")  ) {
-  knitr::include_graphics(here::here("plots", "cover_music_indicators_in_openmuse.png"))
+  knitr::include_graphics(here::here("plots", "cover_data_pillars_omo_small.png"))
 }
 ```
 
@@ -88,11 +92,33 @@ Indicators should be used as traffic signs, and not as route plans. Indicators d
 
 Indicators are used for specific purposes to support decisions with generalised information derived from the data. The specific purpose of an indicator is determined by its context, the questions it seeks to answer, and the party or parties asking these questions.
 
-There are many conceptualisations on how policies should be set for public organizations or businesses; a review of policy cycles is beyond the scope of this paper. For presentation purposes, we use the policy cylce framework of .... adopted by Eurostat for indicator design guidance.
+There are many conceptualisations on how policies should be set for public organizations or businesses; a review of policy cycles is beyond the scope of this paper. For presentation purposes, we use the policy cylce framework of Howlett and Ramesh adopted by Eurostat for indicator design guidance [@howlett_studying_public_policy_1995; @eurostat_towards_2017]. This is a widely used textbook that over 25 years went through four major editions.
+
+[![The policy cycle. This chart appears originally in Towards a harmonised methodology for statistical indicators --- Part 3: Relevance for policy making as Figure 3 on page 17. The chart was recreated for easier reuse.](plots/policy_cycle_2x1.png){fig-align="center" width="90%"}](https://figshare.com/articles/figure/The_Policy_Cycle/23617563)
 
 In an evidence-based policy cycle indicators should be provide different factual information. Different indicators may be needed in the first, `Concept` phase when a business or public body is seeking alternatives to solve a problem: for example, to increase royalty revenue for their artists or assets, and in the final `Outcome` or `Impact` assessment. While impact assessment is often associated with public policy, the current sustainability management techniques require music businesses to implement processes that reduce, for example, fossil fuel use, and eventually have a positive impact (in quantitative terms, a negative change) on greenhouse gas emissions.
 
 [![Figure 2. Policy evaluation cycle with indicators, DOI: 10.6084/m9.figshare.23498441](plots/policy_evaluation_cycle_with_indicators.jpg){#policy_evaluation_cycle_with_indicator fig-alt="Figure 2. Policy evaluation cycle with indicators, DOI: 10.6084/m9.figshare.23498441"}](https://doi.org/10.6084/m9.figshare.23498441)
+
+Several alternative options are available to deal with complexity, each one with specific properties that make them more or less fit for a given purpose. This short summary follows the _Communicating
+complexity_ in the Eurostat guide methodology book [@kotzeva_towards_2017, pp. 34-39.]. 
+
+
+1. Developing indicator sets (including scoreboards or dashboards as specific types of sets) and showing all the information for each individual indicator.
+
+2. Combine indicators on different phenomena and/or dimensions into aggregate, composite or synthetic indicators. A composite indicator is created when individual indicators with different measurements units are combined into a single measure.
+
+3. Show the detailed information on the individual indicators while combining the assessment in ‘aggregated dashboards’.
+
+Regarding the communication of complex subjects, Eurostat normally opts for sets of indicators often in a form of scoreboards or dashboards, and Open Music Europe will do the same, because composite indicators themselves require a higher level of data literacy to interpret correctly. 
+
+Scoreboards are concise lists of key performance indicators (often derived from a larger set) which are assessed against specific targets. Dashboards, on the other hand, do not necessarily have an evaluation function, in the sense that the observed indicator values are not necessarily compared to (policy) targets to assess performance[^2].
+
+[^2]: Dashboards are supposed to be very concise, with a very limited number of indicators. An often used example is the car 'dashboard', which has only few measurement instruments so that they can be monitored also by non-experts simultaneously.
+
+
+
+
 
 Following the data pillars of the *Feasibility study for the establishment of a European Music Observatory : final report* [@emo_feasibility_2020], we foresee the indicators made in our sample reports with the following topics:
 
@@ -118,6 +144,25 @@ Interactivity allows for exchange of ideas and a shared creation of the intended
 
 The *European Statistics Code of Practice* [@european_statistics_code_of_practice_2017] see the *Quality Assurance Framework of the European Statistical System* [@ESS_QAF_2019 pp. 45-46] goes a step further in interactivity. The idea of interactivity in the statistical indicator design process originates in the the European Commission's *more-than-information approach*: „Communication is more than information: it establishes a relationship and initiates a dialogue with European citizens, it listens carefully and it connects to people. It is not a neutral exercise devoid of value, it is an essential part of the political process." The Commission refers here instead of the 'target audience' to 'citizens' because communication is not just a technical exercise of message delivery but part of a democratic involvement of citizens [@kotzeva_towards_2017, p7.]. Similarly, a good business indicator is not only printed in the annual financial or sustainability reports of a company: it is often cited in management discussions or communicated by line managers to workers to direct their focus. To make indicators conversation-starters or arguments in professional discussions, we have to ensure their usability: we not only need to involve potential users in the design phase, but we have to get regular feedback on the usability and professional improvement of the indicators.
 
+## Building a European Music Observatory
+The European music stakeholders would like to see a solution “as a centralised music data and an intelligence hub at [the] European level” with the creation of the European Music Observatory [@emo_feasibility_2020]. As a Finnish example and CEEMID have shown, the inherent conflicts of interest and the presence of many microenterprises favour the incorporation of decentralised approaches, too  [@osimo_symphony_2019]. The EMO Feasibility Study also stresses the need to learn from the CEEMID project and exploit richer open data sources, which usually require the development of open-source processing capacities.
+
+According to the study published by the European Commission on the impact of open-source software (OSS) and open-source hardware (OSH) on the European economy, conducted by Fraunhofer ISI and Open Forum Europe on 6 September 2021, open-source software contributed between €65 to €95 billion to the European Union’s GDP [@eu_ossh_study_2021]. It promises significant growth opportunities for the region’s digital economy. The 2020 report on the _Economic Value of Open Data_ estimated the value of open data available in the European economy at €184 billion and is forecasted to reach between €199.51 and €334.21 billion in 2025 [@huyer_economic_2020]. To unlock this potential, the study makes similar but less specific recommendations as the OSS/OSH study described above.
+
+The `Open Music Europe` project and its grants aim to build an Open Music Observatory based on the Reprex background minimum viable product, the Digital Music Observatory. The OMO aims to develop the Digital Music Observatory further and fill up four "data pillars" as defined by the EMO Feasibility Study to reach Technical Readiness Level (TLR) 7: a system prototype demonstration in an operational environment for Horizon Europe scientific research outputs, pan-European use by representative music stakeholders, and proven ability to scale up various pillars to further national environments. We want to accomplish this goal with as many  OSSH and open data components as possible.
+
+The `Music Economy Pillar` will help the better valuation and business representation of European music and the creation of more jobs, revenues, and gross value added in the sector with data and evidence for better policies and better business strategies. WP1 of Open Music Europe plans to fill this pillar with an initial set of indicators that serve this purpose. This means that the data and visualisation output from WP1 T1.2 are incepted as the new economy pillar.
+
+The `Diversity and Circulation Pillar` will prevent unnecessary music import into market segments where European creators suffer from weak institutions that put them at a competitive disadvantage. Furthermore, it would help European creators and music businesses to develop business and public cultural export strategies to find new export markets. How we design this pillar of the OMO would also support designing better local content regulations and better monitoring and enforcement of them. This means that the data and visualisation output from WP2 T2.2 are incepted as this new diversity pillar.
+
+The `Music, Society, Citizenship Pillar` will support better music education and better cultural policies by providing data on the non-economic value of music. The way we plan the initial data assets of this pillar can support the development of Environmental, Social and Governance (ESG) management, control, and reporting tools with reliable, science-based benchmarks. Environmentally and socially more sustainable business administration of music and fighting various forms of bribery in music requires high-quality data that is best collected, processed and disseminated in a data observatory. 
+
+The `Innovation Pillar` will be helping other third-party music innovators with open data. 
+
+The delivery has two alternatives, contingent on the results of T5.3 exploitation plans and the development of the planned official _European Music Observatory_. The observatory will reach TLR 7 and be handed over to the European Music Observatory as a functional reproducible research, open and big data collection part of the future institutions.
+
+Should the planned, official European Music Observatory fail to be completed by the end of 2025 or will not be in the position to receive the OMO as a complete system, all fallback option is to include the OMO in the _Digital Music Observatory_ at TRL Level 8 with a business continuation plan, but with limited funding and servicing capacity (a complete and operational data observatory without official recognition, with a limited budget and servicing capacity as an open collaboration project open to any representative national or EU music stakeholder organisation.)
+
 # Data coordination and ingestion
 
 ## Curated statistical data
@@ -132,13 +177,13 @@ A good example of these tools will be used and further developed in WP3. The iot
 
 The public sector already holds an extraordinary amount of data that can contribute to improving the internal market and to the development of new applications for consumers and legal entities. The Directive 2003/98/EC established a set of minimum rules governing the re-use and the practical arrangements for facilitating re-use of existing documents held by public sector bodies of the Member States; the rules of such data access were updated in 2019 with the adoption of the *Directive (EU) 2019/1024 of the European Parliament and of the Council of 20 June 2019 on open data and the re-use of public sector information (recast)* [@eu_directive_2019-1024].
 
-According to the preamble of the Directive, information collected, produced, reproduced, and disseminated within the exercise of a public task or a service of general interest is an important primary material for digital content products and services, with a special emphasis on publicly funded scientific research, such as Open Music Europe, or other Horizon Europe framework funded projects. They may form data monopolies and prevent innovation, start-ups, and SMEs from entering into the Single market; for natural persons and civil society organisations, they may form an insurmountable barrier to control the political process, public policy, or engage in advocating for better policies[^2].
+According to the preamble of the Directive, information collected, produced, reproduced, and disseminated within the exercise of a public task or a service of general interest is an important primary material for digital content products and services, with a special emphasis on publicly funded scientific research, such as Open Music Europe, or other Horizon Europe framework funded projects. They may form data monopolies and prevent innovation, start-ups, and SMEs from entering into the Single market; for natural persons and civil society organisations, they may form an insurmountable barrier to control the political process, public policy, or engage in advocating for better policies[^3].
 
-[^2]: "The preamble of the Directive (EU) 2019/1024 states these aims with justifications (see the legal text for full details):</br>(36) Charges for the re-use of documents constitute an important market entry barrier for start-ups and SMEs. Documents should therefore be made available for re-use free of charge and, where charges are necessary, they should in principle be limited to the marginal costs \[...\]</br> (44) The re-use of documents should not be subject to conditions. However, in some cases justified by a public interest objective, a licence may be issued imposing conditions \[...\]</br> (69) For the purpose of ensuring their maximum impact and to facilitate re-use, the high-value datasets should be made available for re-use with minimal legal restrictions and free of charge."
+[^3]: "The preamble of the Directive (EU) 2019/1024 states these aims with justifications (see the legal text for full details):</br>(36) Charges for the re-use of documents constitute an important market entry barrier for start-ups and SMEs. Documents should therefore be made available for re-use free of charge and, where charges are necessary, they should in principle be limited to the marginal costs \[...\]</br> (44) The re-use of documents should not be subject to conditions. However, in some cases justified by a public interest objective, a licence may be issued imposing conditions \[...\]</br> (69) For the purpose of ensuring their maximum impact and to facilitate re-use, the high-value datasets should be made available for re-use with minimal legal restrictions and free of charge."
 
-Because the amount of data carriers, such as digital documents containing datasets, text, and data visualisations, exceeds what humans can possibly read, curate, and analyse, the directive also emphasises the need to provide access to public sector information in open and machine-readable formats and via APIs[^3].
+Because the amount of data carriers, such as digital documents containing datasets, text, and data visualisations, exceeds what humans can possibly read, curate, and analyse, the directive also emphasises the need to provide access to public sector information in open and machine-readable formats and via APIs[^4].
 
-[^3]: "The preamble of the Directive (EU) 2019/1024 states these further aims</br>(34) To facilitate re-use, public sector bodies should, where possible and appropriate, make documents, including those published on websites, available through an open and machine-readable format and together with their metadata, at the best level of precision and granularity, in a format that ensures interoperability\[...\]</br> (69) For the purpose of ensuring their maximum impact and to facilitate re-use, the high-value datasets should be made available for re-use with minimal legal restrictions and free of charge. They should also be published via APIs.\[...\]</br>(27)\[...\] Beside open access, commendable efforts are being made to ensure that data management planning becomes a standard scientific practice and to support the dissemination of research data that are findable, accessible, interoperable and re-usable (the FAIR principle)."
+[^4]: "The preamble of the Directive (EU) 2019/1024 states these further aims</br>(34) To facilitate re-use, public sector bodies should, where possible and appropriate, make documents, including those published on websites, available through an open and machine-readable format and together with their metadata, at the best level of precision and granularity, in a format that ensures interoperability\[...\]</br> (69) For the purpose of ensuring their maximum impact and to facilitate re-use, the high-value datasets should be made available for re-use with minimal legal restrictions and free of charge. They should also be published via APIs.\[...\]</br>(27)\[...\] Beside open access, commendable efforts are being made to ensure that data management planning becomes a standard scientific practice and to support the dissemination of research data that are findable, accessible, interoperable and re-usable (the FAIR principle)."
 
 The European open data regime not only sets the normative standards for our projects and its data management, but it also provides an opportunity to tap into a wide array of data sources in public institutions. Building a framework to receive and process large amounts of public information is the task of our WP5 (Open Music Observatory), but it requires much work in the other work packages, too, because domain-specific knowledge and curation are needed to identify the necessary data to be ingested, the procedures to process the data, and to check its quality.
 
@@ -298,10 +343,13 @@ For example, CEEMID pioneered the semi-open anonymous music professional survey 
 
 # References
 
+https://doi.org/10.6084/m9.figshare.23617563.v1
+
 ## List of Figures
 
-Figure 1: *The statistical infrastructure of indicators*, DOI: [10.6084/m9.figshare.23600571](https://doi.org/10.6084/m9.figshare.23600571)\
-Figure 2: *Policy evaluation cycle with indicators*, DOI: [10.6084/m9.figshare.23498441](https://figshare.com/account/projects/129944/articles/23498441)\
-Figure 3: *The music industry value chain; adopted from the model used to map the Croatian music industry,* DOI: [10.6084/m9.figshare.19174310.v1](https://doi.org/10.6084/m9.figshare.19174310.v1)
+Figure 1: *The statistical infrastructure of indicators*, DOI: [10.608](https://doi.org/10.6084/m9.figshare.23600571)[4](https://doi.org/10.6084/m9.figshare.23600571){target="_blank"}[/m9.figshare.23600571](https://doi.org/10.6084/m9.figshare.23600571)\
+Figure 2: *The policy cycle*, DOI: [10.6084/m9.figshare.23617563](https://doi.org/10.6084/m9.figshare.23617563.v1){target="_blank"}\
+Figure 3: *Policy evaluation cycle with indicators*, DOI: [10.6084/m9.figshare.23498441](https://figshare.com/account/projects/129944/articles/23498441){target="_blank"}\
+Figure 4: *The music industry value chain; adopted from the model used to map the Croatian music industry,* DOI: [10.6084/m9.figshare.19174310.v1](https://doi.org/10.6084/m9.figshare.19174310.v1){target="_blank"}
 
 ## Bibliography
