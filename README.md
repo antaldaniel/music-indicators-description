@@ -1,8 +1,13 @@
 # Open Music Europe Indicators
 
-Daniel Antal: [Indicators in Open Music Europe](https://antaldaniel.github.io/music-indicators-description/music-indicators.html) (manuscript)
+Daniel Antal: [Indicators in Open Music Europe](https://antaldaniel.github.io/music-indicators-description/music-indicators.html) (manuscript) Bookmark this document as a [webpage](https://antaldaniel.github.io/music-indicators-description/music-indicators.html). DOI: [10.5281/zenodo.8096811](https://zenodo.org/record/8096811).
 
-This is a manuscript developed for [Open Music Europe](https://openmuse.eu/) following the Open Policy Analysis Guidelines. All materials related to this research can be found in the open repository at [https://github.com/antaldaniel/music-indicators-description](https://github.com/antaldaniel/music-indicators-description). Bookmark this document as a [webpage](https://antaldaniel.github.io/music-indicators-description/music-indicators.html). DOI: [10.5281/zenodo.8096811](https://zenodo.org/record/8096811).
+Daniel Antal: [Data Pillars in the Open Music Observatory](https://antaldaniel.github.io/music-indicators-description/music-observatory-pillars.html) (manuscript) Bookmark this document as a [webpage](https://antaldaniel.github.io/music-indicators-description/music-observatory-pillars.html). DOI: [10.5281/zenodo.8096811](https://zenodo.org/record/8108720).
+
+
+_The two documents will be detached_
+
+These are manuscripts developed for [Open Music Europe](https://openmuse.eu/) following the Open Policy Analysis Guidelines. All materials related to this research can be found in the open repository at [https://github.com/antaldaniel/music-indicators-description](https://github.com/antaldaniel/music-indicators-description). 
 
 
 🌈 Contribution guidelines - you must abide by the [Contributor Covenant](https://www.contributor-covenant.org/version/2/1/code_of_conduct/) Code of Conduct.
