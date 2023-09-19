@@ -31,6 +31,7 @@ bibliography:
 - bib/indicators.bib
 - bib/figures.bib
 - bib/OpenMusE.bib
+- bib/opendata.bib
 - bib/openmusicrepositories.bib
 - bib/statreg.bib
 ---

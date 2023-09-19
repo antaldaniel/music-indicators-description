@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.433">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Daniel Antal">
+<meta name="dcterms.date" content="2023-09-19">
+<meta name="keywords" content="Indicators, Music business, Open Music Europe">
+
+<title>Data Pillars in the Open Music Observatory</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="music-observatory-pillars_files/libs/clipboard/clipboard.min.js"></script>
+<script src="music-observatory-pillars_files/libs/quarto-html/quarto.js"></script>
+<script src="music-observatory-pillars_files/libs/quarto-html/popper.min.js"></script>
+<script src="music-observatory-pillars_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="music-observatory-pillars_files/libs/quarto-html/anchor.min.js"></script>
+<link href="music-observatory-pillars_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="music-observatory-pillars_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="music-observatory-pillars_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="music-observatory-pillars_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="music-observatory-pillars_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<style>
+
+      .quarto-title-block .quarto-title-banner {
+        background: #00348A;
+      }
+</style>
+
+
+</head>
+
+<body>
+
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Data Pillars in the Open Music Observatory</h1>
+            <p class="subtitle lead">Version 0.1.5</p>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Daniel Antal </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">19 September 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#executive-summary-and-editing-notes" id="toc-executive-summary-and-editing-notes" class="nav-link active" data-scroll-target="#executive-summary-and-editing-notes">Executive summary and editing notes</a></li>
+  <li><a href="#defining-data-to-policy" id="toc-defining-data-to-policy" class="nav-link" data-scroll-target="#defining-data-to-policy">I. Defining the Data-to-policy Pipeline</a>
+  <ul class="collapse">
+  <li><a href="#i.1-data-coordination-and-ingestion" id="toc-i.1-data-coordination-and-ingestion" class="nav-link" data-scroll-target="#i.1-data-coordination-and-ingestion">I.1 Data coordination and ingestion</a></li>
+  <li><a href="#i.2-from-data-to-indicators" id="toc-i.2-from-data-to-indicators" class="nav-link" data-scroll-target="#i.2-from-data-to-indicators">I.2 From data to indicators</a></li>
+  <li><a href="#i.3-from-indicators-to-policies" id="toc-i.3-from-indicators-to-policies" class="nav-link" data-scroll-target="#i.3-from-indicators-to-policies">I.3 From indicators to policies</a></li>
+  <li><a href="#i.4-interactive-communication-of-indicators-and-open-policy-analysis" id="toc-i.4-interactive-communication-of-indicators-and-open-policy-analysis" class="nav-link" data-scroll-target="#i.4-interactive-communication-of-indicators-and-open-policy-analysis">I.4 Interactive communication of indicators and Open Policy Analysis</a></li>
+  </ul></li>
+  <li><a href="#d51-omo" id="toc-d51-omo" class="nav-link" data-scroll-target="#d51-omo">II. Building a European Music Observatory</a>
+  <ul class="collapse">
+  <li><a href="#data-coordination-ingestion" id="toc-data-coordination-ingestion" class="nav-link" data-scroll-target="#data-coordination-ingestion">II.1 Data coordination and ingestion</a>
+  <ul class="collapse">
+  <li><a href="#coordination-of-the-music-economy-pillar" id="toc-coordination-of-the-music-economy-pillar" class="nav-link" data-scroll-target="#coordination-of-the-music-economy-pillar">Coordination of the Music Economy pillar</a></li>
+  </ul></li>
+  <li><a href="#curated-statistical-data" id="toc-curated-statistical-data" class="nav-link" data-scroll-target="#curated-statistical-data">II.2 Curated statistical data</a></li>
+  <li><a href="#reusable-microdata-psi" id="toc-reusable-microdata-psi" class="nav-link" data-scroll-target="#reusable-microdata-psi">II.3 Reusable microdata and public sector information</a></li>
+  <li><a href="#data-linking" id="toc-data-linking" class="nav-link" data-scroll-target="#data-linking">II.4. Data linking and statistical registers</a>
+  <ul class="collapse">
+  <li><a href="#music-industry-business-register" id="toc-music-industry-business-register" class="nav-link" data-scroll-target="#music-industry-business-register">Music Industry Business Register</a></li>
+  <li><a href="#comprehensive-music-registers" id="toc-comprehensive-music-registers" class="nav-link" data-scroll-target="#comprehensive-music-registers">Comprehensive Music Registers</a></li>
+  <li><a href="#flexible-linking-of-administrative-records-to-sustainability-measures" id="toc-flexible-linking-of-administrative-records-to-sustainability-measures" class="nav-link" data-scroll-target="#flexible-linking-of-administrative-records-to-sustainability-measures">Flexible linking of administrative records to sustainability measures</a></li>
+  <li><a href="#generalised-frameworks-for-data-linking" id="toc-generalised-frameworks-for-data-linking" class="nav-link" data-scroll-target="#generalised-frameworks-for-data-linking">Generalised frameworks for data linking</a></li>
+  </ul></li>
+  <li><a href="#observatory-data-collection" id="toc-observatory-data-collection" class="nav-link" data-scroll-target="#observatory-data-collection">II.5 Data collection for the observatory</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a>
+  <ul class="collapse">
+  <li><a href="#list-of-figures" id="toc-list-of-figures" class="nav-link" data-scroll-target="#list-of-figures">List of figures</a></li>
+  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">Bibliography</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="music-observatory-pillars.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="music-observatory-pillars.docx"><i class="bi bi-file-word"></i>MS Word</a></li><li><a href="music-observatory-pillars.epub"><i class="bi bi-file"></i>ePub</a></li></ul></div></nav>
+</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<div style="page-break-after: always;"></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plots/Banner_Title_Pillars_of_the_Open_Music_Observatory.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This is a manuscript developed for <a href="https://openmuse.eu/">Open Music Europe</a> following the Open Policy Analysis Guidelines. All materials related to this research can be found in the open repository at <a href="https://github.com/antaldaniel/music-indicators-description" class="uri">https://github.com/antaldaniel/music-indicators-description</a>. Bookmark this document as a <a href="https://antaldaniel.github.io/music-indicators-description/music-observatory-pillars.html">webpage</a>. Permanent storage and DOI: <a href="https://zenodo.org/record/8108720">Zenodo</a>.</p>
+<p><em>Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Research Executive Agency. Neither the European Union nor the granting authority can be held responsible for them.</em></p>
+</div>
+</div>
+<section id="executive-summary-and-editing-notes" class="level1 unnumbered">
+<h1 class="unnumbered">Executive summary and editing notes</h1>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><em>The methods and indicators will be presented in D1.1, D2.1 and D3.1, and perhaps in D4.1</em> Because the same indicator development methodology is used in <code>WP1</code>, <code>WP2</code>, <code>WP3</code> and <code>WP4</code>, this is part of a separate document which defines the entire data-to-policy pipeline, i.e., the main objective of the grant. <a href="https://music.dataobservatory.eu/documents/open_music_europe/data-to-policy/music-observatory-pillars.html">Data Pillars in the Open Music Observatory</a> (html, pdf, docx, epub)</li>
+</ol>
+<ul>
+<li><em>Indicators that bring transparency to music streaming and zero-marginal-price (free) uses of music are developed, as well as indicators about the economic contributions of music to the national economy.</em> This is the subject of this main document, and can be found <a href="https://music.dataobservatory.eu/documents/open_music_europe/economy/report/economy_music_data_indicators.html">Economy of music in Europe: Novel data collection methods and indicators</a> in html, pdf, docx, epub formats.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="defining-data-to-policy" class="level1">
+<h1>I. Defining the Data-to-policy Pipeline</h1>
+<p>Open Music Europe offers a <code>data-to-policy</code> pipeline, which extends the music data pipeline to processing data that is ready to use in evidence-based business and policy administration. A data pipeline is a method in which raw data is ingested from various data sources and then ported to a data store for further analysis, in this case, to an open, shared, collaborative music observatory. We extend this pipeline using reproducible research techniques, a novel application of the <em>Open Policy Analysis Guidelines</em>, and good statistical practices to support evidence-based policy analysis, scientific music research and sound business strategy building. In this last leg of the pipeline, we emphasise usability for our project’s target audiences and good documentation practices. We want to ensure that our data is high quality and that users can understand it well; such properties guarantee that it can support robust and correct business, scientific or policy conclusions. For supporting decisions, we usually process the data into an indicator or a set of indicators, which are displayed as a part of a scoreboard dashboard or a standardised business or policy report.</p>
+<p>II. <a href="#d51-omo">Building a European Music Observatory</a></p>
+<ul>
+<li><p>II.1 <a href="#data-coordination-ingestion">Data coordination and ingestion</a>: what data exists in some form, what needs to be reprocessed, and what needs to be collected? How it will reach the observatory?</p></li>
+<li><p>II.2 <a href="#curated-statistical-data">Curated statistical data</a>: a revision and ingestion of already processed statistical data.</p></li>
+<li><p>II.3 <a href="#reusable-microdata-psi">Reusable microdata and public sector information:</a> a map to data that is not statistically processed (microdata) but exists and we can use it.</p></li>
+<li><p>II.4.<a href="#data-linking">Data linking and statistical registers</a>: the statistical framework that coordinates the process.</p></li>
+<li><p>II.5 <a href="#observatory-data-collection">Data collection</a> for the observatory.</p></li>
+</ul>
+<section id="i.1-data-coordination-and-ingestion" class="level2">
+<h2 class="anchored" data-anchor-id="i.1-data-coordination-and-ingestion">I.1 Data coordination and ingestion</h2>
+<p>A data pipeline is a method in which raw data is ingested from various data sources and then ported to the data store for further analysis, in this case, to an open, shared, collaborative music observatory. We have two aims:</p>
+<ol type="1">
+<li>We want to create a data production method that makes already available public data more usable for music businesses, researchers, and policymakers and links further data to fill data (information) gaps.</li>
+<li>We want to enable data collection that is complementary to already existing high-quality, reliable data collection programs and only connects data that is compatible with pre-existing data and that does not exist already.</li>
+</ol>
+<p>To achieve these goals, we want to define statistical processes linking the production of official, governmental statistics (free to reuse under the Open Data Directive and the Data Governance Act) with scientific or business-oriented market research statistical production. The <code>production of statistical data</code> is discussed in the context of the broader term of statistical processes used by the statistical authorities to develop, produce and disseminate statistics in the <em>European Statistical System (ESS) Handbook for Quality and Metadata Reports</em>, which is a European statistical standard <span class="citation" data-cites="ess_handbook_for_quality_2021">(<a href="#ref-ess_handbook_for_quality_2021" role="doc-biblioref">European Statistical System (ESS) 2021</a>)</span>. The ESS recognises the following data collection and production processes:</p>
+<ul>
+<li><p><code>Survey</code>: a direct collection of individual data from a sample of respondents for statistical purposes with three subtypes, depending on whether data are collected from all units, and if not, whether probability sampling or non-probability sampling is used (Probability Survey, Non-Probability Survey and Census Survey).</p></li>
+<li><p><code>Administrative data collection</code> refers to the set of activities involved in the collection, processing, storage and dissemination of statistical data from one or more administrative sources.</p></li>
+</ul>
+<p>The first leg of the data-to-policy pipeline requires the creation of a data coordination program.</p>
+<p>1, We want to reuse publicly funded data collection to avoid duplication. For this, we need to understand, describe and analyse those statistical processes that create data of interest for <code>Open Music Europe</code>. For example, various survey programs, such as AES, Eurobarometer, or EU-SILC, produce cultural access and participation surveys, critically important data sources about the enjoyment and creation of music.</p>
+<ol start="2" type="1">
+<li>We need to create open science statistical processes, for example, a harmonised Open Music Europe CAP survey, that collects compatible data with the pre-existing Slovak and Hungarian national CAP surveys and the EU-wide CAP surveys since 2003.</li>
+</ol>
+<p>The first leg of the data-to-policy pipeline requires the creation of a statistical infrastructure, a data observatory, that can receive processed and unprocessed public and private data, link them, and offer a data pipeline for newly collected data, too.</p>
+</section>
+<section id="i.2-from-data-to-indicators" class="level2">
+<h2 class="anchored" data-anchor-id="i.2-from-data-to-indicators">I.2 From data to indicators</h2>
+<p>Statistical indicators, or, in short, indicators, are derived from accounting systems and statistical data.</p>
+<p>Accounting systems are coherent and integrated accounts, balance sheets and tables based on a set of agreed rules. Statistical data is also collected based on agreed and coherent rules.</p>
+<p>The use of indicators is widespread in the economics, business, social aspects, or public policies of music and the broader cultural and creative industries agenda. Statistical indicators, or, in short, indicators, are derived from accounting systems and statistical data.</p>
+<p>Accounting systems are coherent and integrated accounts, balance sheets and tables based on a set of agreed rules. Statistical data is also collected based on agreed and coherent rules. What kind of accounting systems are we likely to use?</p>
+<ul>
+<li><code>Economic and financial data</code> is usually stored by standardised account or ERP systems and follow internationally harmonised rules of bookkeeping. This accounting data is used for the creation of tax returns, for example, which are the most important administrative sources of governmental statistics. Or they produce the annual balance sheet and profit and loss statement, which are the most important public data sources on a company’s activities.</li>
+<li><code>Environmental or sustainability reporting data</code> is harmonised by global initiatives like GRI and currently they are undergoing European standardisation into the European Sustainability Reporting Standards. It is an important goal of Open Music Europe to design administrative or survey processes that collect sustainability from and for the music businesses and institutions.</li>
+<li><code>Royalty accounts</code> are specific financial accounts of the copyright-based industries such as literature/book publishing or music. Because the music industry deals with the biggest number of individual royalty earning assets (apart from photography, which is a far less globalised and harmonised industry), the music industry has perhaps the most advanced royalty accounting practices in the world. We plan to make use cases to create data processes to tap into this industry-specific source in a way that the datasets created complement well other administrative or survey data sources.</li>
+</ul>
+<p>A statistical indicator summarises a key issue or phenomenon derived from a series of observed facts; it is a generalisation of the information in the data. It is often compared metaphorically to traffic signs that help travelers to arrive to their destinations safely. The knowledge we gain from indicators is used to uncover social, environmental or economic phenomena and establish connections between them. It also provides a basis for influencing and controlling such phenomena on a business level (for example, key performance indicators) or the level of public policy (for example, <em>ex ante</em> and <em>ex post</em> evaluation indicators.)</p>
+<blockquote class="blockquote">
+<p>A statistical indicator is a summary measure related to a key issue or phenomenon and derived from a series of observed facts. [<span class="citation" data-cites="kotzeva_towards_2017">Kotzeva et al. (<a href="#ref-kotzeva_towards_2017" role="doc-biblioref">2017</a>)</span>, pp.&nbsp;7]<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</blockquote>
+<p>A <code>statistical indicator</code>, or simply, <code>indicator</code>, is the representation of statistical data for a specified time, place or any other relevant characteristic, corrected for at least one dimension (usually size) so as to allow for meaningful comparisons. It is a summary measure related to a key issue or phenomenon and derived from a series of observed facts.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://doi.org/10.6084/m9.figshare.23600571"><img src="plots/statistical_infrastructure_for_indicators.png" class="img-fluid figure-img" style="width:90.0%" alt="The statistical infrastructure of indicators, DOI: https://doi.org/10.6084/m9.figshare.23600571"></a></p>
+<figcaption class="figure-caption">The statistical infrastructure of indicators, DOI: https://doi.org/10.6084/m9.figshare.23600571</figcaption>
+</figure>
+</div>
+<p>The aim of statistical data collection is the creation of sets of data that can be generalised well; for example, when we collect data about people, it includes data on people from all relevant age or gender groups. <code>Open Music Europe</code> is using and developing data collection from primary sources, such as surveys and ephemeral big data, or taking samples of large, pre-existing but biased datasets, such as royalty accounts.</p>
+</section>
+<section id="i.3-from-indicators-to-policies" class="level2">
+<h2 class="anchored" data-anchor-id="i.3-from-indicators-to-policies">I.3 From indicators to policies</h2>
+<p>Indicators should be used as traffic signs, and not as route plans. Indicators do not give an explanation to a problem or reveal a solution; they must be interpreted in the context of domain-specific knowledge. While the word <em>policy</em> is very often used in the context of public policies, we use it in a more general meaning: a course or principle of action adopted or proposed by an organization or individual. <code>Open Music Europe</code> does not offer tailored data analysis for organisations or individuals, it offers indicators and other data products that can help the setting of policies for public policy, for-profit and social music enterprises, and hopefully even for individual creators. We would like to do this with placing indicators into reproducible reports. These reports contextualize our indicators, and end the data-to-policy pipeline.</p>
+<blockquote class="blockquote">
+<p>Unlike the data from which they are derived, indicators are used for specific purposes. The specific purpose of an indicator is determined by its context, the questions it seeks to answer, and the party or parties asking these questions. <span class="citation" data-cites="eurostat_towards_2014">(<a href="#ref-eurostat_towards_2014" role="doc-biblioref">Eurostat 2014, 1:p7</a>)</span></p>
+</blockquote>
+<p>Indicators are used for specific purposes to support decisions with generalised information derived from the data. The specific purpose of an indicator is determined by its context, the questions it seeks to answer, and the party or parties asking these questions.</p>
+<p>There are many conceptualisations on how policies should be set for public organizations or businesses; a review of policy cycles is beyond the scope of this paper. For presentation purposes, we use the policy cylce framework of Howlett and Ramesh adopted by Eurostat for indicator design guidance <span class="citation" data-cites="howlett_studying_public_policy_1995 eurostat_towards_2017">(<a href="#ref-howlett_studying_public_policy_1995" role="doc-biblioref">Howlett and Ramesh 1995</a>; <a href="#ref-eurostat_towards_2017" role="doc-biblioref">Eurostat 2017</a>)</span>. This is a widely used textbook that over 25 years went through four major editions.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://figshare.com/articles/figure/The_Policy_Cycle/23617563"><img src="plots/policy_cycle_2x1.png" class="img-fluid figure-img" style="width:90.0%"></a></p>
+<figcaption class="figure-caption">The policy cycle. This chart appears originally in Towards a harmonised methodology for statistical indicators — Part 3: Relevance for policy making as Figure 3 on page 17. The chart was recreated for easier reuse.</figcaption>
+</figure>
+</div>
+<p>In an evidence-based policy cycle indicators should be provide different factual information. Different indicators may be needed in the first, <code>Concept</code> phase when a business or public body is seeking alternatives to solve a problem: for example, to increase royalty revenue for their artists or assets, and in the final <code>Outcome</code> or <code>Impact</code> assessment. While impact assessment is often associated with public policy, the current sustainability management techniques require music businesses to implement processes that reduce, for example, fossil fuel use, and eventually have a positive impact (in quantitative terms, a negative change) on greenhouse gas emissions.</p>
+<div id="policy_evaluation_cycle_with_indicator">
+<p><a href="https://doi.org/10.6084/m9.figshare.23498441"><img src="plots/policy_evaluation_cycle_with_indicators.jpg" class="img-fluid" alt="Figure 2. Policy evaluation cycle with indicators, DOI: 10.6084/m9.figshare.23498441"></a></p>
+<p>Figure 2. Policy evaluation cycle with indicators, DOI: 10.6084/m9.figshare.23498441</p>
+</div>
+<p>Several alternative options are available to deal with complexity, each one with specific properties that make them more or less fit for a given purpose. This short summary follows the <em>Communicating complexity</em> in the Eurostat guide methodology book <span class="citation" data-cites="kotzeva_towards_2017">(<a href="#ref-kotzeva_towards_2017" role="doc-biblioref">Kotzeva et al. 2017, 2:34–39</a>.)</span>.</p>
+<ol type="1">
+<li><p>Developing indicator sets (including scoreboards or dashboards as specific types of sets) and showing all the information for each individual indicator.</p></li>
+<li><p>Combine indicators on different phenomena and/or dimensions into aggregate, composite or synthetic indicators. A composite indicator is created when individual indicators with different measurements units are combined into a single measure.</p></li>
+<li><p>Show the detailed information on the individual indicators while combining the assessment in ‘aggregated dashboards’.</p></li>
+</ol>
+<p>Regarding the communication of complex subjects, Eurostat normally opts for sets of indicators often in a form of scoreboards or dashboards, and Open Music Europe will do the same, because composite indicators themselves require a higher level of data literacy to interpret correctly.</p>
+<p>Scoreboards are concise lists of key performance indicators (often derived from a larger set) which are assessed against specific targets. Dashboards, on the other hand, do not necessarily have an evaluation function, in the sense that the observed indicator values are not necessarily compared to (policy) targets to assess performance<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
+<p>Following the data pillars of the <em>Feasibility study for the establishment of a European Music Observatory : final report</em> <span class="citation" data-cites="emo_feasibility_2020">(<a href="#ref-emo_feasibility_2020" role="doc-biblioref">Commission et al. 2020</a>)</span>, we foresee the indicators made in our sample reports with the following topics:</p>
+<ul>
+<li><p><strong>Report on the European Music Economy</strong>: Support stakeholders with economic questions, such as taxation, price-setting and economic exploitation, and advocating for policies that better support the development of the industry or its parts like publishing <span class="citation" data-cites="open_music_europe_economy_repository">(<a href="#ref-open_music_europe_economy_repository" role="doc-biblioref">Open Music Europe 2023e</a>)</span>.</p></li>
+<li><p><strong>Report on Music Diversity and Circulation in Europe</strong>: Local content regulations, maintaining the diversity of music circulation in Europe, and other aspects of diversity <span class="citation" data-cites="open_music_europe_diversity_repository">(<a href="#ref-open_music_europe_diversity_repository" role="doc-biblioref">Open Music Europe 2023b</a>)</span>.</p></li>
+<li><p><strong>Report on Music, Society, and Citizenship in Europe</strong>: Inform about the societal aspects of music, amateur practices, education, and sustainability <span class="citation" data-cites="open_music_europe_society_repository">(<a href="#ref-open_music_europe_society_repository" role="doc-biblioref">Open Music Europe 2023d</a>)</span>.</p></li>
+<li><p><strong>Report on Music Innovation &amp; Technology in Europe</strong>: Novel data-driven applications <span class="citation" data-cites="open_music_europe_innovation_repository_2023">(<a href="#ref-open_music_europe_innovation_repository_2023" role="doc-biblioref">Open Music Europe 2023c</a>)</span>.</p></li>
+</ul>
+</section>
+<section id="i.4-interactive-communication-of-indicators-and-open-policy-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="i.4-interactive-communication-of-indicators-and-open-policy-analysis">I.4 Interactive communication of indicators and Open Policy Analysis</h2>
+<p>Indicators are most important in communicating data in a business or public policy context. To discuss this communication, it is helpful to distinguish between simple one-directional information transmission and communication as an interactive process. The informational or one-directional communication of indicators focuses on information transmission between a sender and a receiver. The interactive communication of indicators means that the message is actively constructed by both the sender and the receiver(s), who exchange information in a feedback loop.</p>
+<blockquote class="blockquote">
+<p>Like the mediators who strive to communicate between different parties to find their point of agreement, communication through indicators allows to overpass boundaries between policy, science, statistics and public debate. Thus indicators are able to reveal various phenomena to different user groups — policy makers, researchers, citizens, journalists, statisticians, specialists in different domains. Reaching various types of audiences through their communication function, indicators can ensure that statistics are usable and useful <span class="citation" data-cites="kotzeva_towards_2017">(<a href="#ref-kotzeva_towards_2017" role="doc-biblioref">Kotzeva et al. 2017, 2:p7</a>.)</span>.</p>
+</blockquote>
+<p>Going back to the often used traffic management example, a simple one-directional indicator is a speed limit sign on a static road sign; a more interactive version uses sensors and cameras to measure the actual traffic density and to recommend a speed at which vechicles will not jam the road.</p>
+<p>Interactivity allows for exchange of ideas and a shared creation of the intended content of the message that the planned indicator conveys. This requires user involvement in the construction of indicators and indicator sets. The developed indicators need to be based on a wide consensus reached through a dialogue involving as many potential user groups as appropriate. This way they can have their say on the relevance of the statistical message. For example, on Digital Streaming Platforms (DSPs) a music creator or label is facing with hundreds of hidden prices. One of our aims is to create price indicators that help a music label, distributor or a band to direct marketing efforts towards more valuable streaming segments. We need to create a price indicator that is as simple as a stock exchange index which is often followed by small and institutional investors alike.</p>
+<blockquote class="blockquote">
+<p>PRINCIPLE 11 Relevance: European Statistics meet the needs of users. 11.1. Procedures are in place to consult users, to monitor the relevance and value of existing statistics in meeting their needs, and to consider and anticipate their emerging needs and priorities. Innovation is pursued to continuously improve statistical output. 11.2 Priority needs are being met and reflected in the work programme. 11.3 User satisfaction is monitored on a regular basis and is systematically followed up.</p>
+</blockquote>
+<p>The <em>European Statistics Code of Practice</em> <span class="citation" data-cites="european_statistics_code_of_practice_2017">(<a href="#ref-european_statistics_code_of_practice_2017" role="doc-biblioref">European Statistical System Committee 2018</a>)</span> see the <em>Quality Assurance Framework of the European Statistical System</em> <span class="citation" data-cites="ESS_QAF_2019">(<a href="#ref-ESS_QAF_2019" role="doc-biblioref">European Statistical System (ESS) 2019, 45–46</a>)</span> goes a step further in interactivity. The idea of interactivity in the statistical indicator design process originates in the the European Commission’s <em>more-than-information approach</em>: „Communication is more than information: it establishes a relationship and initiates a dialogue with European citizens, it listens carefully and it connects to people. It is not a neutral exercise devoid of value, it is an essential part of the political process.” The Commission refers here instead of the ‘target audience’ to ‘citizens’ because communication is not just a technical exercise of message delivery but part of a democratic involvement of citizens <span class="citation" data-cites="kotzeva_towards_2017">(<a href="#ref-kotzeva_towards_2017" role="doc-biblioref">Kotzeva et al. 2017, 2:p7</a>.)</span>. Similarly, a good business indicator is not only printed in the annual financial or sustainability reports of a company: it is often cited in management discussions or communicated by line managers to workers to direct their focus. To make indicators conversation-starters or arguments in professional discussions, we have to ensure their usability: we not only need to involve potential users in the design phase, but we have to get regular feedback on the usability and professional improvement of the indicators.</p>
+</section>
+</section>
+<section id="d51-omo" class="level1">
+<h1>II. Building a European Music Observatory</h1>
+<p>The European music stakeholders would like to see a solution “as a centralised music data and an intelligence hub at [the] European level” with the creation of the European Music Observatory <span class="citation" data-cites="emo_feasibility_2020">(<a href="#ref-emo_feasibility_2020" role="doc-biblioref">Commission et al. 2020</a>)</span>. As a Finnish example and CEEMID have shown, the inherent conflicts of interest and the presence of many microenterprises favour the incorporation of decentralised approaches, too <span class="citation" data-cites="osimo_symphony_2019">(<a href="#ref-osimo_symphony_2019" role="doc-biblioref">Osimo et al. 2019</a>)</span>. The EMO Feasibility Study also stresses the need to learn from the CEEMID project and exploit richer open data sources, which usually require the development of open-source processing capacities.</p>
+<p>According to the study published by the European Commission on the impact of open-source software (OSS) and open-source hardware (OSH) on the European economy, conducted by Fraunhofer ISI and Open Forum Europe on 6 September 2021, open-source software contributed between €65 to €95 billion to the European Union’s GDP <span class="citation" data-cites="eu_ossh_study_2021">(<a href="#ref-eu_ossh_study_2021" role="doc-biblioref">European Commission et al. 2021</a>)</span>. It promises significant growth opportunities for the region’s digital economy. The 2020 report on the <em>Economic Value of Open Data</em> estimated the value of open data available in the European economy at €184 billion and is forecasted to reach between €199.51 and €334.21 billion in 2025 <span class="citation" data-cites="huyer_economic_2020">(<a href="#ref-huyer_economic_2020" role="doc-biblioref">Huyer and van Knippenberg 2020</a>)</span>. To unlock this potential, the study makes similar but less specific recommendations as the OSS/OSH study described above.</p>
+<p>The <code>Open Music Europe</code> project and its grants aim to build an Open Music Observatory based on the Reprex background minimum viable product, the Digital Music Observatory. The OMO aims to develop the Digital Music Observatory further and fill up four “data pillars” as defined by the EMO Feasibility Study to reach Technical Readiness Level (TLR) 7: a system prototype demonstration in an operational environment for Horizon Europe scientific research outputs, pan-European use by representative music stakeholders, and proven ability to scale up various pillars to further national environments. We want to accomplish this goal with as many OSSH and open data components as possible.</p>
+<p>The <code>Music Economy Pillar</code> will help the better valuation and business representation of European music and the creation of more jobs, revenues, and gross value added in the sector with data and evidence for better policies and better business strategies. WP1 of Open Music Europe plans to fill this pillar with an initial set of indicators that serve this purpose. This means that the data and visualisation output from WP1 T1.2 are incepted as the new economy pillar.</p>
+<p>The <code>Diversity and Circulation Pillar</code> will prevent unnecessary music import into market segments where European creators suffer from weak institutions that put them at a competitive disadvantage. Furthermore, it would help European creators and music businesses to develop business and public cultural export strategies to find new export markets. How we design this pillar of the OMO would also support designing better local content regulations and better monitoring and enforcement of them. This means that the data and visualisation output from WP2 T2.2 are incepted as this new diversity pillar.</p>
+<p>The <code>Music, Society, Citizenship Pillar</code> will support better music education and better cultural policies by providing data on the non-economic value of music. The way we plan the initial data assets of this pillar can support the development of Environmental, Social and Governance (ESG) management, control, and reporting tools with reliable, science-based benchmarks. Environmentally and socially more sustainable business administration of music and fighting various forms of bribery in music requires high-quality data that is best collected, processed and disseminated in a data observatory.</p>
+<p>The <code>Innovation Pillar</code> will be helping other third-party music innovators with open data.</p>
+<p>The delivery has two alternatives, contingent on the results of T5.3 exploitation plans and the development of the planned official <em>European Music Observatory</em>. The observatory will reach TLR 7 and be handed over to the European Music Observatory as a functional reproducible research, open and big data collection part of the future institutions.</p>
+<p>Should the planned, official European Music Observatory fail to be completed by the end of 2025 or will not be in the position to receive the OMO as a complete system, all fallback option is to include the OMO in the <em>Digital Music Observatory</em> at TRL Level 8 with a business continuation plan, but with limited funding and servicing capacity (a complete and operational data observatory without official recognition, with a limited budget and servicing capacity as an open collaboration project open to any representative national or EU music stakeholder organisation.)</p>
+<section id="data-coordination-ingestion" class="level2">
+<h2 class="anchored" data-anchor-id="data-coordination-ingestion">II.1 Data coordination and ingestion</h2>
+<p><code>Open Music Europe</code> offers a ‘data-to-policy’ pipeline, which extends the music data pipeline to processing data that is ready to use in evidence-based business and policy administration. This requires the coordinated ingestion of pre-existing data that is readily available and what needs to be processed, or where further data needs to be collected by primary statistical data collection methods.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://figshare.com/articles/figure/Data_Coordination_in_the_Data-to-Policy_Pipeline/23618811"><img src="plots/data-to-poliy-pipeline-coordination.png" class="img-fluid figure-img" style="width:90.0%"></a></p>
+<figcaption class="figure-caption">Data coordination in the data-to-policy pipeline</figcaption>
+</figure>
+</div>
+<p>When the data is available in a trustworthy data sources, we will still reprocess it.</p>
+<section id="coordination-of-the-music-economy-pillar" class="level3">
+<h3 class="anchored" data-anchor-id="coordination-of-the-music-economy-pillar">Coordination of the Music Economy pillar</h3>
+<p>Out of the four pillars mentioned in the previous subsection, the <code>Music Economy Pillar</code> has the most advanced description of what data gaps it wants to fill and how. Since this work follows to Open Policy Analysis Guidelines, you can access the entire repository of the work and see the living document in development progress on [GitHub](https://github.com/dataobservatory-eu/report-european-music-economy), or review it periodically on Zenodo <span class="citation" data-cites="antal_et_al_2023">(<a href="#ref-antal_et_al_2023" role="doc-biblioref">Antal, Kmety Barteková, and Remeňová 2023</a>)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plots/wp1_schema.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Our envisioned data coordination and ingestion in the context of the music economy pillar</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="curated-statistical-data" class="level2">
+<h2 class="anchored" data-anchor-id="curated-statistical-data">II.2 Curated statistical data</h2>
+<p>In the last two decades, the availability of statistical data increased to the extent that non-professional users often do not find the information they need. Furthermore, statistical authorities increasingly release data that is less processed and requires statistical and domain-specific know-how to transform into a form that music professionals and researchers, or policy-makers can readily use.</p>
+<p>Our seemingly trivial first data pipelines are building access to curated and if needed, re-processed statistical data towards high-quality statistical data sources. The <a href="https://ropengov.org/">rOpenGov</a> collaboration maintained by the University of Turku, where REPREX is an active developer, provides reproducible tools to access such sources. These tools will be further developed into a statistical ecosystem with a more friendly user interface in WP4.</p>
+<p>A good example of these tools will be used and further developed in WP3. The iotables R package <span class="citation" data-cites="r_package_iotables">(<a href="#ref-r_package_iotables" role="doc-biblioref">Antal 2021</a>)</span> on rOpenGov, developed by the leadership of REPREX, provides access to the Eurostat data warehouse’s symmetric input-output data. Symmetric input-output and auxiliary tables connect thousands of poorly usable statistical indicators into analytical tables, which can be used for various economic analyses and social or environmental impact assessments. The iotables package helps the user to bring together the necessary data from Eurostat’s data warehouse (that includes that from the European Environmental Agency) and perform data processing and algebraic transformations that result in readily-usable indicators and multipliers. This service can be seen as a middleware between data processing and data analysis: most analysts who know how to work with the Leontieff- or Ghosh system to work with this data would spend days just to put together the necessary indicators from the original source.</p>
+</section>
+<section id="reusable-microdata-psi" class="level2">
+<h2 class="anchored" data-anchor-id="reusable-microdata-psi">II.3 Reusable microdata and public sector information</h2>
+<p>The public sector already holds an extraordinary amount of data that can contribute to improving the internal market and to the development of new applications for consumers and legal entities. The Directive 2003/98/EC established a set of minimum rules governing the re-use and the practical arrangements for facilitating re-use of existing documents held by public sector bodies of the Member States; the rules of such data access were updated in 2019 with the adoption of the <em>Directive (EU) 2019/1024 of the European Parliament and of the Council of 20 June 2019 on open data and the re-use of public sector information (recast)</em> <span class="citation" data-cites="open_data_directive_2019">(<a href="#ref-open_data_directive_2019" role="doc-biblioref">European Parliament and the Council 2019</a>)</span>.</p>
+<p>According to the preamble of the Directive, information collected, produced, reproduced, and disseminated within the exercise of a public task or a service of general interest is an important primary material for digital content products and services, with a special emphasis on publicly funded scientific research, such as Open Music Europe, or other Horizon Europe framework funded projects. They may form data monopolies and prevent innovation, start-ups, and SMEs from entering into the Single market; for natural persons and civil society organisations, they may form an insurmountable barrier to control the political process, public policy, or engage in advocating for better policies<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
+<p>Because the amount of data carriers, such as digital documents containing datasets, text, and data visualisations, exceeds what humans can possibly read, curate, and analyse, the directive also emphasises the need to provide access to public sector information in open and machine-readable formats and via APIs<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p>
+<p>The European open data regime not only sets the normative standards for our projects and its data management, but it also provides an opportunity to tap into a wide array of data sources in public institutions. Building a framework to receive and process large amounts of public information is the task of our WP5 (Open Music Observatory), but it requires much work in the other work packages, too, because domain-specific knowledge and curation are needed to identify the necessary data to be ingested, the procedures to process the data, and to check its quality.</p>
+<p>By applying the same framework (principles, legal norms, organisational and technical standards) as the national statistical offices themselves as regards public and private administrative data sources, Open Music Europe can facilitate the data supply for the music sector in multiple ways:</p>
+<p>- We can engage with statistical offices and government and offer them our innovations to be scaled up using the publicly funded and legally more powerful national statistical frameworks;</p>
+<p>- Using industry or research funds, we can fill data gaps with complementary data that integrates well with novel data products resulting from the increasing reliance of statistical organisations on third-party data.</p>
+<p>The framework for this work is developed in WP5 as the music observatory. The domain-specific elements of this framework must be developed by four work packages.</p>
+</section>
+<section id="data-linking" class="level2">
+<h2 class="anchored" data-anchor-id="data-linking">II.4. Data linking and statistical registers</h2>
+<p>“A register aims to be a complete list of the objects in a specific group of objects or population.” <span class="citation" data-cites="anders_register-based_2007">(<a href="#ref-anders_register-based_2007" role="doc-biblioref">Anders and Britt 2007</a>)</span> We are planning music industry registers where the objects are <em>music works</em> and <em>sound recordings</em> (in statistical terms, music products), and the populations are <em>music authors</em>, <em>music performers</em>, <em>groupings of performers</em> (as the majority of the musicians perform, record, release in groups, ensembles, orchestras), <em>record labels</em> (which may be formal and informal businesses) and <em>music publishers</em> (enterprises.) From a statistical point of view, our planned music industry registers can be seen as “administrative registers” because they were not initially created for a statistical purpose by a statistical authority.</p>
+<p>A <em>statistical register</em> is a continuously or regularly updated set of objects for a given population. It contains information on the identification and accessibility of population units as well as other attributes which support the surveying process of the population. It serves as a constantly updated list of potential data sources: people or enterprises, for example, who may be invited to a sample survey or a census. The statistical register is both a coordination tool for data collection (everybody is found who should provide data), and an important data quality management tool (we know if somebody was not found, how it will distort our resulting datasets.)</p>
+<p>The <em>register-statistical processing</em> includes various procedures to edit and code data, handle missing observations, etc., which are necessary to transform an administrative register that was initially <em>not</em> created for statistical data collection (for example, a register of music authors or producers of sound recordings which is created for the collection of royalties) into a statistical register. Or, more precisely in our case, because we aim to create economics statistics compatible with the system of national accounts and existing business statistics, into a <em>statistical business register (henceforth: SBR)</em>.</p>
+<p>The statistical business register is an essential tool for creating survey frames or sample frames, in other words, to organise statistical data collection. In non-technical terms, this register is necessary to decide who should get a data request.</p>
+<ul>
+<li><p>For a <em>sample survey</em>, the register is used to draw a lottery of those members of the population who will be invited to provide data.</p></li>
+<li><p>In a <em>census</em>-type survey, all registered members of the population, for example, all music labels, will receive an invitation to an interview or form.</p></li>
+<li><p>In the case of <em>a register-based survey</em>, all members of the register, for example, all collective management societies in the territory, will be requested to send data directly from their databases.</p></li>
+</ul>
+<p>Particularly register-based surveys are ideal tools for reducing the cost of the survey and the burden on respondents, because it reuses already well-processed data. For example, if we can use a collective management societies royalty accounts systems (with proper data protection) as a data source, we do not have to ask every musician, label or publisher to tell us their revenues in euros from the previous year.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/three-types-of-surveys.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Comparison of three types of statistical surveys. Based on A. Wallgren and B. Wallgren: Register-based Statistics – Administrative Data for Statistical Purposes</figcaption>
+</figure>
+</div>
+<p>The use of registers and turning them into statistical registers is so essential for creating statistics that the European and Slovak statistical laws allow the official statistical offices to request access to institutional registers of other state bodies for statistical purposes. The use of the tax register to create enterprise data or court registers to create statistics on divorce or criminality is usual in every European country.</p>
+<p>The use of non-state registers is getting increasingly common, too. In such cases, a private register (for example, the music work register of SOZA) is based on an agreement between the statistical authority and the private entity. For example, we are well aware of the fact that self-employed musicians, i.e.&nbsp;the majority of the musicians, rarely supply data for statistical purposes because they do not participate either in the Roc-01 or Roc-02 surveys (which form the basis of most structural business statistics in Slovakia) and only randomly selected, and not as musicians, in the LFS-survey, another important source. Creating statistics about industries, activities and products that self-employed professionals dominate may require special registers.</p>
+<blockquote class="blockquote">
+<p>Self-employed professionals who are nonemployers, i.e.&nbsp;one person enterprises, are frequently under-covered but tend to play a very important role in several ISIC sections (e.g.&nbsp;section M (professional, scientific and technical activities) and class 9000 [i.e.&nbsp;<em>performing artists, including musicians – note by authors</em>]). If they are registered with an administrative source they should be included in the SBR. Typical administrative sources are social security files, income tax files, VAT files, files of chambers of commerce and of crafts, government registration files, and lists of doctors. <span class="citation" data-cites="un_sbr_guidelines_2020">(<a href="#ref-un_sbr_guidelines_2020" role="doc-biblioref"><span>‘United Nations Guidelines on Statistical Business Registers. Final Draft Prior to Official Editing’</span> 2020, 40</a>.)</span></p>
+</blockquote>
+<p>We believe that the best registers for the creation of music industry statistics are the registers of the collective management societies – authors, performers and producers of sound recordings cannot receive some of the royalties without these organisations, so almost all active musicians, and even heirs of deceased musicians are members in these organisations. Another important sources are the catalogues and databases of libraries (which collect information, among other things, on the authors and their published books) or music libraries and music information centers (which collect similar information on published music works.)</p>
+<p>Our pilot register is the <em>Slovak Comprehensive Music Database</em>, which aims to connect and synchronise various existing registers of published music works and commercially released or archived music sound and video recordings. Because such works are protected or may be protected by copyrights and neighbouring rights, and because the act of publishing (of a work) or a [commercial] release (of a recording) reveals not only the music but its title and authors and/or producers and performers, such registers are an ideal first step to create a statistical register, even if this is not their primary function. In our view, the primary function of the Slovak Comprehensive Music Database is to help the promotion and rights management (royalty collection) of all Slovak music abroad as well as in Slovakia and to help new applications that help radio stations to comply with local content regulations, or educators to help the discovery of local, regional and national music for children and their parents, to name a few.</p>
+<p>Non-statistical registers are playing an increasing role in creating new statistical products from commercial or other sources and even in creating reliable statistics from big data. The UN Structural Business Register—which is very heavily influenced by the most advanced European guidelines—“consider that commercial data available from private companies […] may be considered in the same way as administrative [<em>statistical</em>] data. Use of such data can be a cost-effective way of improving the SBR since these databases are extensively researched and managed for commercial benefit by their owners. […] Other sources include data collected by companies for their own commercial purposes, for example data owned by market information companies and companies that collect data and maintain directories and databases that they provide to their customers for commercial purposes. <span class="citation" data-cites="un_sbr_guidelines_2020">(<a href="#ref-un_sbr_guidelines_2020" role="doc-biblioref"><span>‘United Nations Guidelines on Statistical Business Registers. Final Draft Prior to Official Editing’</span> 2020, 59–60</a>.)</span>”</p>
+<p>Another critical use of a new, non-statistical register (after <em>register-statistical processing</em>) may allow the ex ante or ex post (retrospective) harmonisation of official statistical and scientific or business surveys. For example, suppose the offical Roc-02 survey undersamples music enterprises. In that case, we may conduct a similar, voluntary and privately funded survey that collects further music-industry-specific answers in a way that they remains harmonised with the Roc-02 survey. The retrospective harmonisation of answers into a joined database allows the creation of music-industry statistics even if the official Roc-02 sample would not permit such a new division.</p>
+<p>A usual approach to extend the functionality of existing statistical registers of statistical offices with minimal complication is to extract parts of the SBR and link it to other data sources, resulting in an <em>SBR satellite</em>, which is outside and independent of the SBR. This can alleviate concerns about statistical confidentiality and the mixing of workflows among official statisticians, open science and business users.</p>
+<blockquote class="blockquote">
+<p>“The SBR may support the satellite approach in different ways. If the units available in one or more frozen frames are linked to data from sources other than those used in the SBR, then the combined result may be a semi-manufactured statistical product blending statistical and administrative data. The difference from a sample is that, in this kind of satellite, information is linked to all units in the underlying population. This approach is useful, for example, to provide economic indicators on self-employed (income estimation) or to compile the regional distribution of production factors to support regional accounting information.” <span class="citation" data-cites="un_sbr_guidelines_2020">(<a href="#ref-un_sbr_guidelines_2020" role="doc-biblioref"><span>‘United Nations Guidelines on Statistical Business Registers. Final Draft Prior to Official Editing’</span> 2020, p32</a>)</span></p>
+</blockquote>
+<p>We see the creation of a <em>Music Industry Statistical Business Register Satellite</em> that turns the core units of the <em>Slovak Comprehensive Music Database</em> into a <em>Slovak Music Industry Register</em>, and after register-statistical processing into SBR Satellite itself, a necessary first step towards the extension of the existing national accounts into a satellite music industry account. This approach may be viable in any European country; however, Slovakia is an excellent place for demonstration because it already has a cultural and creative industries satellite account system (which does not include a music industry account.)</p>
+<p>The <em>Music Industry Statistical Business Register Satellite</em> would support a high-quality ex ante and ex post survey harmonisation, because it would support the sample design, the administration of the sample, and the harmonisation of statistical procedures (such as handling of missing data) for consistency with official statistical procedures. Whilst survey harmonisation is often explained via the harmonisation of questionnaires, interview situations or the via the retrospective joining of datasets, a high-quality retrospecitve harmonisation and perhaps any ex ante harmonisation requires the broader services that an SBR satellite can offer.</p>
+<p>Our rOpenGov statistical ecosystem is already implementing many procedures that are required for such a technical harmonisation: the [statcodelists] R package harmonises codebooks; the [retroharmonize] package support data joining; for more general tasks, such as missing data handling, statisticians in leading statistical authorities like the Dutch, Finnish or Swedish national offices have made procedures open-source.</p>
+<p>While the creation of SBR satellite is commonplace in Europe and even in developing country statistical systems, it is usually initiated by the national statistical office; our approach goes a step further in that it offers to turn a potential commercial data source (which was identified by the Slovak CCI strategy as a potential data source) into a production-ready statistical data source. The combination of open scientific data collection, business data provision, and the creation of an SBR satellite and national account satellites may be the first exploitation of the relatively novel legislative framework of the Open Data Directive, the Data Governance Act, and the EU’s open science and evidence-based policy efforts.</p>
+<section id="music-industry-business-register" class="level3">
+<h3 class="anchored" data-anchor-id="music-industry-business-register">Music Industry Business Register</h3>
+<p>In <code>WP1</code> we are developing new indicators for filling the data gaps in the European music economy. For this purpose, we need a framework that efficiently divides data relevant to the music economy and which falls outside of the scope of the music economy. In other words, we need a mapping tool that allows the collection of music industry data separately from non-music industry data.</p>
+<p>Our emphasis in <code>WP1</code> is the provision of data for valuing zero-price music and other forms of undervalued European content and to provide information on designing better corporate and public policies on music streaming and broadcasting. While Open Music Europe mainly focuses on the publishing and recording side of the music business, we need to build a framework that can support the bigger live performance part of the music industry.</p>
+<p>The pilot country in this regard is going to be Slovakia, where at the beginning of the project, we secured to come to a Memorandum of Understanding with the national government. We aim to create a data framework in the music industries that is extensible to the broader cultural and creative industries context and successfully links statistical, government and private data for a better design, implementation and monitoring of Slovak public policies and the business policies of Slovak music stakeholders, including our Consortium member SOZA.</p>
+<p>The SKMBR is an experimental concept of continuously or regularly updating set of objects for a given population: i.e., music enterprises, including freelance music professionals.</p>
+</section>
+<section id="comprehensive-music-registers" class="level3">
+<h3 class="anchored" data-anchor-id="comprehensive-music-registers">Comprehensive Music Registers</h3>
+<p>In WP2 we are developing new indicators for filling the data gaps in the European music diversity and circulation. For this purpose, we need a framework that efficiently divides data relevant to the local, national or European music stakeholders about music that they consider to be relevant to them and music that is outside of the scope of their interest. For example, suppose they want to monitor the radio quotas defined by the Slovak national legislation for Slovak content. In that case, they have to rely on a list of sound recordings available for broadcasting that are “Slovak” and “Not-Slovak”. Or, if they want to monitor the French quotes on new music in a broadcast stream, we must have a reference register of recordings with the creation or release date.</p>
+<p>In WP2 we rely on the CEEMID background of the Slovak Demo Music Database, which we will develop into a Slovak Comprehensive Music Database (SKMDb) and replicate in Bulgaria. Such a database fulfils many roles apart from creating actionable indicators of music diversity and circulation on public policy and business levels.</p>
+<p>The SKMDb will be a continuously or regularly updated set of objects for a given population: music that is considered “Slovak”, or relevant for the Slovak businesses and public policies. Having such a reference list of music works and recordings is an essential prerequisite to understanding, for example, the market share of Slovak music in various foreign markets or the domestic market. Without such a comprehensive registry, local content regulations (which are present in most European markets) cannot be efficiently monitored or enforced; music export strategies cannot be designed, implemented or monitored; and, of course, music labels and distributors are often spending their marketing budgets inefficiently.</p>
+</section>
+<section id="flexible-linking-of-administrative-records-to-sustainability-measures" class="level3">
+<h3 class="anchored" data-anchor-id="flexible-linking-of-administrative-records-to-sustainability-measures">Flexible linking of administrative records to sustainability measures</h3>
+<p>In <code>WP3</code> we aim to develop music data products to support the triple transition of the music industry to a more digitally apt, environmental and socially sustainable development path. For the first time, after adopting the CSRD Directive, Europe is standardising indicators that can monitor progress towards these goals (and towards more ethical business conducts, too.)</p>
+<p>In this case, we need to build very flexible registers that connect the administrative records of music organisations with external sustainability data, for example, connecting their existing management information system with greenhouse gas emission data or data on gender equality measures.</p>
+<p>Because <code>WP3</code> has no methodological budget for developing such a framework, it will rely on partly the symmetric input-output tables and auxiliary sustainabilty tables of the national account systems, and partly on the REPREX background, the <em>Eviota System</em>. The Eviota system is developing a similar tool to the sustainability auxiliary (satellite) accounts of the national account system for IFRS-based, European corporate accounting systems used by both non-profit, social and for-profit enterprises.</p>
+</section>
+<section id="generalised-frameworks-for-data-linking" class="level3">
+<h3 class="anchored" data-anchor-id="generalised-frameworks-for-data-linking">Generalised frameworks for data linking</h3>
+<p>In WP4 we want to foster innovative data uses in the music sector. Our aim here is to provide a more general framework for data access and data improvement for novel, innovative data-driven technologies and workflows that can support the music industry.</p>
+</section>
+</section>
+<section id="observatory-data-collection" class="level2">
+<h2 class="anchored" data-anchor-id="observatory-data-collection">II.5 Data collection for the observatory</h2>
+<p>Statistical data is collected either from accounts or surveys. Accounts, in statistical terms, are consistently collected data sources. For example, royalty accounts, which follow the general accounting principles applied in all EU countries, with industry-specific further data organisation, are the correct sources of authors’ and neighbouring rights (publishing and recording copyright) revenues. Reprex and ALOADED will demonstrate the use of such accounts for statistical productions in Open Music Europe in a way other stakeholders can replicate. In this case, the royalty accounts of ALOADED are a microdata source (non‐aggregated observations or measurements of characteristics of individual statistical units without direct identifiers.) The word <code>microdata</code> refers to the fact that we want to avoid the distribution of this highly confidential data specific to ALOADED and its clients, and we want to use it for a more general and aggregated data creation.</p>
+<p>When no standard form of data registration and accounting exists, statisticians like market researchers rely on constructing surveys. The word survey originally meant a systematic examination and recording of the area and features of (an area of land) to construct a map, plan, or description. Such surveys are still used in natural sciences or cartography. Still, in business and social sciences areas, it is used metaphorically for questionnaires that are filled out about statistical units (music companies, performing music groups) either by the statistical unit itself or by the surveyor. In our experience, the best music industry surveys are administered in face-to-face interviews, when the surveyors pre-fill certain information on a questionnaire (including information on the time and place of the interview, its length, and the cooperation level of the interviewed person) and other administers the answers given orally by the surveyed statistical unit. Due to cost considerations, self-administered surveys, such as online questionnaire forms, are often used; however, in this case, the survey is filled out by a music professional and not a statistician, and misunderstandings are unavoidable.</p>
+<p>The best way to collect statistical information is to rely on, whenever a high-quality account is available, this account itself; and use well-designed surveys with quality assurance to collect the rest of the information. In both cases, data protection rules must be adhered to at all times.</p>
+</section>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<section id="list-of-figures" class="level2">
+<h2 class="anchored" data-anchor-id="list-of-figures">List of figures</h2>
+<p>Figure 1: <em>Data-to-policy schema</em>: will be made reusable only in final format. Figure 2: <em>Data-to-policy schema for D1.1</em>: will be made reusable only in final format, or may not need to be reused (this is zooming in Figure 1.) Figure 3: <em>The statistical infrastructure of indicators</em>, DOI: <a href="https://doi.org/10.6084/m9.figshare.23600571">10.608</a><a href="https://doi.org/10.6084/m9.figshare.23600571" target="_blank">4</a><a href="https://doi.org/10.6084/m9.figshare.23600571">/m9.figshare.23600571</a><br>
+Figure 4: <em>The policy cycle</em>, DOI: <a href="https://doi.org/10.6084/m9.figshare.23617563.v1" target="_blank">10.6084/m9.figshare.23617563</a><br>
+Figure 5: <em>Policy evaluation cycle with indicators</em>, DOI: <a href="https://figshare.com/account/projects/129944/articles/23498441" target="_blank">10.6084/m9.figshare.23498441</a><br>
+Figure 6: <em>Data coordination in the data-to-policy pipeline,</em> DOI: <a href="https://figshare.com/articles/figure/Data_Coordination_in_the_Data-to-Policy_Pipeline/23618811">10.6084/m9.figshare.23618811.v1</a><br>
+Figure 7: <em>The music industry value chain; adopted from the model used to map the Croatian music industry,</em> DOI: <a href="https://doi.org/10.6084/m9.figshare.19174310.v1" target="_blank">10.6084/m9.figshare.19174310.v1</a></p>
+</section>
+<section id="bibliography" class="level2 unnumbered">
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">Bibliography</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-anders_register-based_2007" class="csl-entry" role="listitem">
+Anders, Wallgren, and Wallgren Britt. 2007. <em>Register-Based Statistics. Administrative Data for Statistical Purposes</em>. 1st ed. Chichester:United Kingdom: John Wiley &amp; Sons Ltd.
+</div>
+<div id="ref-r_package_iotables" class="csl-entry" role="listitem">
+Antal, Daniel. 2021. <span>‘Iotables Importing and Manipulating Symmetric Input-Output Tables’</span>. Zenodo. <a href="https://doi.org/10.5281/zenodo.5802522">https://doi.org/10.5281/zenodo.5802522</a>.
+</div>
+<div id="ref-antal_et_al_2023" class="csl-entry" role="listitem">
+Antal, Daniel, Mária Kmety Barteková, and Katarína Remeňová. 2023. <span>‘<span class="nocase">Economy of music in Europe: Novel data collection methods and indicators</span>’</span>. Zenodo. <a href="https://doi.org/10.5281/zenodo.8334648">https://doi.org/10.5281/zenodo.8334648</a>.
+</div>
+<div id="ref-emo_feasibility_2020" class="csl-entry" role="listitem">
+Commission, European, Sport Directorate-General for Education Youth, Culture, M Clarke, P Vroonhof, J Snijders, A Le Gall, et al. 2020. <em>Feasibility Study for the Establishment of a European Music Observatory : Final Report</em>. Publications Office. <a href="https://doi.org/doi/10.2766/9691">https://doi.org/doi/10.2766/9691</a>.
+</div>
+<div id="ref-consolidated_eu_regulation_99-2013" class="csl-entry" role="listitem">
+EUR-Lex. 2018. <em><span class="nocase">Consolidated text: Regulation (EU) No 99/2013 of the European Parliament and of the Council of 15 January 2013 on the European statistical programme 2013-17 (Text with relevance for the <span>EEA</span> and for Switzerland; no longer in force)</span></em>. <a href="http://data.europa.eu/eli/reg/2013/99/2018-01-01/eng">http://data.europa.eu/eli/reg/2013/99/2018-01-01/eng</a>.
+</div>
+<div id="ref-eu_ossh_study_2021" class="csl-entry" role="listitem">
+European Commission, Directorate-General for Communications Networks, Content, Technology, K Blind, S Pätsch, S Muto, M Böhm, T Schubert, P Grzegorzewska, and A Katz. 2021. <em>The Impact of Open Source Software and Hardware on Technological Independence, Competitiveness and Innovation in the EU Economy : Final Study Report</em>. Publications Office. <a href="https://doi.org/doi/10.2759/430161">https://doi.org/doi/10.2759/430161</a>.
+</div>
+<div id="ref-eu_regulation_99-2013" class="csl-entry" role="listitem">
+European Parliament and the Council. 2013. <em><span class="nocase">Regulation (EU) No 99/2013 of the European Parliament and of the Council of 15 January 2013 on the European statistical programme 2013-17. Text with relevance for the EEA and for Switzerland [no longer in force]</span></em>. <a href="http://data.europa.eu/eli/reg/2013/99/oj/eng">http://data.europa.eu/eli/reg/2013/99/oj/eng</a>.
+</div>
+<div id="ref-open_data_directive_2019" class="csl-entry" role="listitem">
+———. 2019. <span>‘Directive (<span>EU</span>) 2019/1024 of the European Parliament and of the Council on Open Data and the Re-Use of Public Sector Information (Open Data Directive)’</span>. <a href="http://data.europa.eu/eli/dir/2019/1024/oj">http://data.europa.eu/eli/dir/2019/1024/oj</a>.
+</div>
+<div id="ref-european_statistics_code_of_practice_2017" class="csl-entry" role="listitem">
+European Statistical System Committee. 2018. <em>European Statistics Code of Practice — Revised Edition 2017. English Version.</em> Luxembourg: Publications Office of the European Union. <a href="https://doi.org/10.2785/798269">https://doi.org/10.2785/798269</a>.
+</div>
+<div id="ref-ESS_QAF_2019" class="csl-entry" role="listitem">
+European Statistical System (ESS). 2019. <span>‘Quality Assurance Framework of the European Statistical System. 2019 Edition (Version 2.0)’</span>. <a href="https://ec.europa.eu/eurostat/documents/64157/4392716/ESS-QAF-V1-2final.pdf/bbf5970c-1adf-46c8-afc3-58ce177a0646">https://ec.europa.eu/eurostat/documents/64157/4392716/ESS-QAF-V1-2final.pdf/bbf5970c-1adf-46c8-afc3-58ce177a0646</a>.
+</div>
+<div id="ref-ess_handbook_for_quality_2021" class="csl-entry" role="listitem">
+———. 2021. <em>European Statistical System (<span>ESS</span>) Handbook for Quality and Metadata Reports — <span class="nocase">re-edition 2021</span></em>. Eurostat Manuals and Guidelines. Luxembourg: Publications Office of the European Union. <a href="https://doi.org/10.2785/616374">https://doi.org/10.2785/616374</a>.
+</div>
+<div id="ref-eurostat_towards_2014" class="csl-entry" role="listitem">
+Eurostat. 2014. <em>Towards a Harmonised Methodology for Statistical Indicators — Part 1: Indicator Typologies and Terminologies</em>. 2014th ed. Vol. 1. Towards a Harmonised Methodology for Statistical Indicators 1. Luxembourg: Publications Office of the European Union. <a href="https://ec.europa.eu/eurostat/web/products-manuals-and-guidelines/-/KS-GQ-14-011">https://ec.europa.eu/eurostat/web/products-manuals-and-guidelines/-/KS-GQ-14-011</a>.
+</div>
+<div id="ref-eurostat_towards_2017" class="csl-entry" role="listitem">
+———. 2017. <em>Towards a Harmonised Methodology for Statistical Indicators — Part 3: Relevance for Policy Making</em>. 2017th ed. Vol. 3. Towards a Harmonised Methodology for Statistical Indicators 1. Luxembourg: Publications Office of the European Union. <a href="https://ec.europa.eu/eurostat/web/products-manuals-and-guidelines/-/KS-GQ-17-007">https://ec.europa.eu/eurostat/web/products-manuals-and-guidelines/-/KS-GQ-17-007</a>.
+</div>
+<div id="ref-howlett_studying_public_policy_1995" class="csl-entry" role="listitem">
+Howlett, Michael, and M. Ramesh. 1995. <em>Studying Public Policy: Policy Cycles and Policy Subsystems</em>. 1st Edition. Toronto: Oxford University Press.
+</div>
+<div id="ref-huyer_economic_2020" class="csl-entry" role="listitem">
+Huyer, Esther, and Laura van Knippenberg. 2020. <em>The Economic Impact of Open Data. Opportunities for Value Creation in Europe</em>. Luxembourg: <span>Publications Office of the European Union</span>. <a href="https://doi.org/10.2830/63132">https://doi.org/10.2830/63132</a>.
+</div>
+<div id="ref-kotzeva_towards_2017" class="csl-entry" role="listitem">
+Kotzeva, Mariana, Anton Steurer, Nicola Massarelli, and Mariana Popova, eds. 2017. <em>Towards a Harmonised Methodology for Statistical Indicators — Part 2: Communicating Through Indicators</em>. 2017th ed. Vol. 2. Towards a Harmonised Methodology for Statistical Indicators 1. Luxembourg: Publications Office of the European Union. <a href="https://ec.europa.eu/eurostat/web/products-manuals-and-guidelines/-/KS-GQ-17-001">https://ec.europa.eu/eurostat/web/products-manuals-and-guidelines/-/KS-GQ-17-001</a>.
+</div>
+<div id="ref-openmuse_2023" class="csl-entry" role="listitem">
+Open Music Europe. 2023a. <span>‘<span class="nocase">Open Music Europe (OpenMusE) – An Open, Scalable, Data-to-Policy Pipeline for European Music Ecosystems</span>’</span>. <a href="https://doi.org/10.3030/101095295">https://doi.org/10.3030/101095295</a>.
+</div>
+<div id="ref-open_music_europe_diversity_repository" class="csl-entry" role="listitem">
+———. 2023b. <span>‘Repository: Report on Music Diversity and Circulation in Europe. <span>GitHub</span>’</span>. Open Policy Analysis Repository with Standardized File Structure. 2023. <a href="https://github.com/dataobservatory-eu/report-music-diversity-circulation-europe/">https://github.com/dataobservatory-eu/report-music-diversity-circulation-europe/</a>.
+</div>
+<div id="ref-open_music_europe_innovation_repository_2023" class="csl-entry" role="listitem">
+———. 2023c. <span>‘Report on Music Innovation &amp; Technology in Europe. <span>GitHub</span>’</span>. Open Policy Analysis Repository with Standardized File Structure. 25 March 2023. <a href="https://github.com/dataobservatory-eu/report-music-innovation-technology">https://github.com/dataobservatory-eu/report-music-innovation-technology</a>.
+</div>
+<div id="ref-open_music_europe_society_repository" class="csl-entry" role="listitem">
+———. 2023d. <span>‘Repository: Report on Music, Society, and Citizenship in Europe. <span>GitHub</span>’</span>. Open Policy Analysis Repository with Standardized File Structure. 25 March 2023. <a href="https://github.com/dataobservatory-eu/report-music-society-citizenship">https://github.com/dataobservatory-eu/report-music-society-citizenship</a>.
+</div>
+<div id="ref-open_music_europe_economy_repository" class="csl-entry" role="listitem">
+———. 2023e. <span>‘Repository: Report on the European Music Economy. <span>GitHub</span>’</span>. Open Policy Analysis Repository with Standardized File Structure. 26 March 2023. <a href="https://github.com/dataobservatory-eu/report-european-music-economy">https://github.com/dataobservatory-eu/report-european-music-economy</a>.
+</div>
+<div id="ref-osimo_symphony_2019" class="csl-entry" role="listitem">
+Osimo, David, Pujol Priego Laya, Turo Pekari, and Ano Sirppiniemi. 2019. <span>‘A Symphony, Not a Solo. How Collective Management Organisations Can Embrace Innovation and Drive Data Sharing in the Music Industry’</span>. Teosto. <a href="https://www.teosto.fi/app/uploads/2020/10/27134714/a-symphony-not-a-solo-policy-brief-final-09012019.pdf">https://www.teosto.fi/app/uploads/2020/10/27134714/a-symphony-not-a-solo-policy-brief-final-09012019.pdf</a>.
+</div>
+<div id="ref-un_sbr_guidelines_2020" class="csl-entry" role="listitem">
+<span>‘United Nations Guidelines on Statistical Business Registers. Final Draft Prior to Official Editing’</span>. 2020. <span>United Nations</span>. <a href="https://unstats.un.org/unsd/business-stat/SBR/Documents/UN_Guidelines_on_SBR.pdf">https://unstats.un.org/unsd/business-stat/SBR/Documents/UN_Guidelines_on_SBR.pdf</a>.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>The definition of the statistical indicator originates from the Regulation 99/2013 of 15 January 2013 on the European statistical programme 2013-17 (Annex I,1: Indicators), which went through several modification and it is no longer in force <span class="citation" data-cites="eu_regulation_99-2013 consolidated_eu_regulation_99-2013">(<a href="#ref-eu_regulation_99-2013" role="doc-biblioref">European Parliament and the Council 2013</a>; <a href="#ref-consolidated_eu_regulation_99-2013" role="doc-biblioref">EUR-Lex 2018</a>)</span>. In a slightly more verbose format it is part of <a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Statistical_indicator">Eurostat’s Glossary</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Dashboards are supposed to be very concise, with a very limited number of indicators. An often used example is the car ‘dashboard’, which has only few measurement instruments so that they can be monitored also by non-experts simultaneously.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>“The preamble of the Directive (EU) 2019/1024 states these aims with justifications (see the legal text for full details):<br>(36) Charges for the re-use of documents constitute an important market entry barrier for start-ups and SMEs. Documents should therefore be made available for re-use free of charge and, where charges are necessary, they should in principle be limited to the marginal costs […]<br> (44) The re-use of documents should not be subject to conditions. However, in some cases justified by a public interest objective, a licence may be issued imposing conditions […]<br> (69) For the purpose of ensuring their maximum impact and to facilitate re-use, the high-value datasets should be made available for re-use with minimal legal restrictions and free of charge.”<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>“The preamble of the Directive (EU) 2019/1024 states these further aims<br>(34) To facilitate re-use, public sector bodies should, where possible and appropriate, make documents, including those published on websites, available through an open and machine-readable format and together with their metadata, at the best level of precision and granularity, in a format that ensures interoperability[…]<br> (69) For the purpose of ensuring their maximum impact and to facilitate re-use, the high-value datasets should be made available for re-use with minimal legal restrictions and free of charge. They should also be published via APIs.[…]<br>(27)[…] Beside open access, commendable efforts are being made to ensure that data management planning becomes a standard scientific practice and to support the dissemination of research data that are findable, accessible, interoperable and re-usable (the FAIR principle).”<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nd/4.0/deed.en_gb">https://creativecommons.org/licenses/by-nd/4.0/deed.en_gb</a></div></div></section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
